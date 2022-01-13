@@ -5,8 +5,1363 @@
     <title>Home</title>
   </head>
   <body>
+    <link rel="stylesheet" href="/css/client.css" type="text/css"/>
+    <link rel="stylesheet" href="/css/styles.css" type="text/css"/>
 
-     <h1>This is Home Page</h1>
+    <nav class="navbar-default navbar-static-side" role="navigation">
+      <div class="sidebar-collapse">
+          <ul class="nav metismenu" id="side-menu">
+              <li class="nav-header">
+                  <div class="dropdown profile-element">
+                      <a href="/client/dashboard">
+                          <img src="/images/1-3.png" style="width: 150px;">
+                      </a>
+
+                      <span data-toggle="dropdown" class="dropdown-toggle">
+                          <a class="block m-t-xs font-bold" id="name" href="/client/user" style="color: #fff;">Fillip</a>
+                          <a class="text-muted text-xs block" href="/client/rates" id="rate">Тариф: <span style="color: #fff;">Premium</span></a>
+                          <a class="text-muted text-xs block" href="/client/rates" id="expires">До: <span style="color: #fff;">18.01.2022 в 15:34</span></a>
+                      </span>
+                  </div>
+                  <div class="logo-element">
+                      MP
+                  </div>
+              </li>
+              <li>
+                  <a href="/client/bonus"><i class="fa fa-graduation-cap"></i><span class="nav-label">Бонусы</span></a>
+              </li>
+              <li>
+                  <a href="/client/dashboard"><i class="fa fa-th-large"></i><span class="nav-label">Главная</span></a>
+              </li>
+              <li>
+                  <a href="/client/products"><i class="fa fa-diamond"></i><span class="nav-label">Товары</span></a>
+              </li>
+              <li>
+                  <a href="/client/categories"><i class="fa fa-sitemap"></i><span class="nav-label">Категории</span></a>
+              </li>
+              <li>
+                  <a href="/client/sellers"><i class="fa fa-users"></i><span class="nav-label">Продавцы</span></a>
+              </li>
+              <li>
+                  <a href="/client/brands"><i class="fa fa-bar-chart-o"></i><span class="nav-label">Бренды</span></a>
+              </li>
+              <li>
+                  <a href="/client/keywords"><i class="fa fa-key"></i><span class="nav-label">Ключевики</span><span class="label label-info float-right">NEW</span></a>
+              </li>
+              <li>
+                  <a href="/client/analytic"><i class="fa fa-line-chart"></i><span class="nav-label">Анализ ниш</span></a>
+              </li>
+              <li>
+                  <a href="/client/market"><i class="fa fa-pie-chart"></i><span class="nav-label">Анализ рынка</span></a>
+              </li>
+              <li>
+                  <a href="/client/store/main"><i class="fa fa-shopping-cart"></i><span class="nav-label">API кабинет</span><!-- <span class="label label-info float-right">NEW</span> --></a>
+              </li>
+              <li style="margin-top: 60px;">
+                  <a href="/client/lists"><i class="fa fa-list"></i><span class="nav-label">Отслеживание</span></a>
+              </li>
+              <li>
+                  <a href="/client/rates"><i class="fa fa-rub"></i><span class="nav-label">Тарифы</span></a>
+              </li>
+              <li>
+                  <a href="/client/partner"><i class="fa fa-money"></i><span class="nav-label" style="font-size: 12px;">Партнерская&nbsp;программа</span></a>
+              </li>
+              <li>
+                  <a href="/client/user"><i class="fa fa-user"></i><span class="nav-label">Профиль</span></a>
+              </li>
+              <li>
+                  <a id="release" href="https://moneyplace.io/category/new/" target="_blank"><i class="fa fa-newspaper-o"></i><span class="nav-label">Обновления</span><span style="" class="label label-warning float-right">2/6</span></a>
+              </li>
+
+              <li>
+                  <a href="/client/faq"><i class="fa fa-question-circle"></i><span class="nav-label">Обучение</span></a>
+              </li>
+              <li>
+                  <a style="font-size: 12px;" href="https://moneyplace.io/2021/06/05/plagin/" target="_blank"><span class="nav-label">Плагин для Chrome</span></a>
+              </li>
+          </ul>
+      </div>
+  </nav>
+
+  <div id="page-wrapper" class="gray-bg" style="min-height: 942px;">
+    <div class="row border-bottom">
+        <div id="mobile-mesage">На данный момент наш сервис не адаптирован под мобильные устройства.</div>
+        <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+
+                <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
+
+                <form id="search-form" class="input-group m-b">
+                    <div class="input-group-prepend">
+                        <button data-toggle="dropdown" class="btn btn-white dropdown-toggle" type="button" aria-expanded="false">
+                            <img style="width: 14px;margin-top: -3px;" src="/images/wildberries.ico">
+                            <img style="width: 14px;margin-top: -3px;" src="/images/ozon.ico">
+                            <img style="width: 14px;margin-top: -3px;" src="/images/ali.ico">
+                            <strong>Поиск по:</strong> <span id="search-helper">товарам</span>
+                        </button>
+                        <ul class="dropdown-menu" id="search-selector" x-placement="bottom-start" style="position: absolute;width: 190px; top: 35px; left: 0px; will-change: top, left;">
+                            <li class="search-selector" data-link="product" data-search-url="products" data-search-param="q[name][like]">Товарам (название)</li>
+                            <li class="search-selector" data-link="product" data-search-url="products" data-search-param="q[sku][equal]">Товарам (артикул)</li>
+                            <li class="search-selector" data-link="product-type" data-search-url="product-type" data-search-param="q[name][like]">Товарам (тип)</li>
+                            <li class="search-selector" data-link="category" data-search-url="categories" data-search-param="q[name][like]">Категориям</li>
+                            <li class="search-selector" data-link="seller" data-search-url="sellers" data-search-param="q[name][like]">Продавцам</li>
+                            <li class="search-selector" data-link="brand" data-search-url="brands" data-search-param="q[name][like]">Брендам</li>
+                            <li class="search-selector" data-link="keyword" data-search-url="keywords" data-search-param="q[name][like]">Ключевым словам</li>
+                        </ul>
+                    </div>
+                    <input type="text" placeholder="Поиск, минимум 3 символа" class="form-control" name="top-search" id="top-search" autocomplete="off">
+
+                    <div class="information-tooltip main-search" data-toggle="tooltip" data-placement="bottom" data-original-title="Порядок слов неважен при поиске. Например, если товар называется &quot;Силиконовый чехол-накладка для Samsung Galaxy S10&quot;, то мы его найдем даже по запросу &quot;для samsung чехол s10&quot;">?</div>
+                </form>
+            </div>
+            <ul class="nav navbar-top-links navbar-right">
+                <li>
+                    <a id="logout" href="login.html">
+                        <i class="fa fa-sign-out"></i> Выход
+                    </a>
+                </li>
+            </ul>
+
+        </nav>
+    </div>
+
+
+
+    <!--
+    <div id="get-course" style="">
+        <div class="alert alert-warning">
+            Реалити-шоу «Битва селлеров» уже на канале! Не пропустите первую серию <a href="https://youtu.be/vgGICiwUuZg" target="_blank">Смотреть</a>
+        </div>
+    </div>
+
+    <div id="watch-about" style="display: none;">
+        <div class="alert alert-info">
+            <p>
+                Узнайте, как умножить свои продажи при помощи Moneyplace! <a href="https://moneyplace.getcourse.ru/mp_reg" target="_blank">Посмотрите запись экскурсии</a>
+            </p>
+        </div>
+    </div>
+    <div id="get-discount" style="display: none;">
+        <div class="alert alert-warning">
+            <p>
+                Ваша скидка на 15-30-50% при покупке на 3-6-12 мес сгорит через: <strong>13:02:23</strong> &nbsp;&nbsp;&nbsp;
+                <button class="btn btn-primary btn-xs">Оставить заявку</button>
+            </p>
+        </div>
+    </div>
+    -->
+
+    <div class="demo-warning-banner" style="display: none;">
+        <div class="alert alert-danger">
+            <p><strong>Внимание!</strong> У Вас закончился оплаченный период. Для работы сервиса необходимо оплатить тариф.
+                Если вы только зарегистрировались - просмотрите обучающие уроки для получения демо-доступа.
+            </p>
+            <!--
+            <p>
+                <strong>Внимание!</strong> Вы находитесь в демо-режиме, который создан в ознакомительных целях с нашим сервисом.
+                Абсолютно все аналитические данные
+                о товарах, категориях, брендах и продавцах - <strong>случайны</strong>. Также стоить отметить, что количество товаров в данном режиме
+                составляет <strong>~1%</strong> от истинного, но функция поиска над данным сообщением - содержит полностью актуальные данные, чтобы вы смогли убедиться
+                в наличии последних. Соответсвенно, <strong>найденные товары во всплывающем окне могут не вывестись в аналитических результутах</strong>.
+            </p>
+            <p>
+                Для наглядной разницы между функционалом тарифов - вы можете активировать любой из них.
+                <strong>Попробовать: </strong>
+                <button type="button" data-id="6" class="btn btn-primary btn-xs">Standart</button>
+                <button type="button" data-id="5" class="btn btn-primary btn-xs">Gold</button>
+                <button type="button" data-id="4" class="btn btn-primary btn-xs">Premium</button>
+            </p>
+            На странице <strong><a href="/client/rates">тарифы</a></strong> вы можете произвести оплату онлайн и в течение 5 минут
+            получить полностью рабочий функционал в соответсвии с выбранным тарифом!
+            -->
+        </div>
+    </div>
+    <div id="page-content" style=""><div class="row wrapper border-bottom white-bg page-heading">
+<div class="col-lg-10">
+    <h2>API Документация</h2>
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item active">
+            <a href="/client/dashboard">Главная</a>
+        </li>
+        <li class="breadcrumb-item active">
+            <strong>API</strong>
+        </li>
+    </ol>
+</div>
+<div class="col-lg-2">
+
+</div>
+</div>
+
+<div class="row" id="documentation" style="margin-top: 20px;">
+<div class="col-lg-3 ">
+    <div class="ibox-title"><h2>Анализ рынка</h2></div>
+    <div class="ibox sticky-top">
+        <div class="ibox-content">
+            <ul>
+                <li><a href="#auth">Авторизация</a></li>
+                <li><a href="#pagination">Пагинация</a></li>
+                <li>
+                    <strong>Поиск</strong>
+                    <ul>
+                        <li><a href="#search-product-name">Товарам (название)</a></li>
+                        <li><a href="#search-product-sku">Товарам (артикул)</a></li>
+                        <li><a href="#search-product-type">Товарам (тип)</a></li>
+                        <li><a href="#search-category">Категориям</a></li>
+                        <li><a href="#search-seller">Продавцам</a></li>
+                        <li><a href="#search-brand">Брендам</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Товары</strong>
+                    <ul>
+                        <li><a href="#product-list">Список товаров</a></li>
+                        <li><a href="#product-info">Информация о товаре</a></li>
+                        <li><a href="#product-stat">Статистика товара</a></li>
+                        <li><a href="#product-position">Позиция товара в категориях</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Категории</strong>
+                    <ul>
+                        <li><a href="#category-list">Список категорий</a></li>
+                        <li><a href="#category-childs">Получение дочерних категорий</a></li>
+                        <li><a href="#category-info">Информация о категории</a></li>
+                        <li><a href="#category-charts">Статистика продаж категории</a></li>
+                        <li><a href="#category-products">Товары в категории</a></li>
+                        <li><a href="#category-brand">Статистика брендов в категории</a></li>
+                        <li><a href="#category-seller">Статистика продавцов в категории</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Продавцы</strong>
+                    <ul>
+                        <li><a href="#seller-list">Список продавцов</a></li>
+                        <li><a href="#seller-info">Информация о продавце</a></li>
+                        <li><a href="#seller-stat">Статистика продаж продавца</a></li>
+                        <li><a href="#seller-products">Товары продавца</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Бренды</strong>
+                    <ul>
+                        <li><a href="#brand-list">Список брендов</a></li>
+                        <li><a href="#brand-info">Информация о бренде</a></li>
+                        <li><a href="#brand-stat">Статистика продаж бренда</a></li>
+                        <li><a href="#brand-products">Товары бренда</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="col-lg-9">
+    <div class="ibox ">
+        <div class="ibox-title" id="auth"><h2>Авторизация</h2></div>
+        <div class="ibox-content">
+            <div>
+                <p>
+                    Для работы с API необходимо запросить токен авторизации у поддержки — отдельный для каждой учетной записи на сервисе MoneyPlace.io,
+                    Все запросы выполняются с добалвением заголовка "Authorization": </p>
+                <pre>Authorization: Token e23ce887f5759136eb8983eee02a9</pre>
+            </div>
+        </div>
+        <div class="ibox-title" style="margin-top: 20px;" id="pagination"><h2>Пагинация</h2></div>
+        <div class="ibox-content">
+            <div>
+                <p>Вся информация о количестве страниц приходит в ответных заголовках, например:</p>
+                <pre>x-pagination-current-page: 1
+x-pagination-page-count: 401218
+x-pagination-per-page: 20
+x-pagination-total-count: 8024347</pre>
+                <p>, где: <br>
+                    <strong>x-pagination-current-page</strong> - текущая страница<br>
+                    <strong>x-pagination-page-count</strong> - кол-во страниц<br>
+                    <strong>x-pagination-per-page</strong> - кол-во элементов сущности на странице<br>
+                    <strong>x-pagination-total-count</strong> - общее кол-во элементов сущности
+                </p>
+                <h3>Управление пагинацией</h3>
+                <p>Переключение между страницами и количеством выводимых элементов передается GET параметрами "page" и "per-page"</p>
+                <pre>GET - https://api.moneyplace.io/****/****?page=3&amp;per-page=50</pre>
+                <p>выведет 50 элементов сущности на третьей странице. Максимальное кол-во страниц - 50.</p>
+            </div>
+        </div>
+        <div class="ibox-title" id="search-product-name" style="margin-top: 20px;"><h2>Поиск по названию товара</h2></div>
+        <div class="ibox-content">
+            <h3>Пример запроса</h3>
+            <pre>GET - https://api.moneyplace.io/search/products?q[name][like]=чехол&amp;sort=position&amp;q[position][more]=0&amp;per-page=19&amp;q[mp][in]=wildberries,ozon,ali</pre>
+            <p>, где: <br>
+                <strong>q[name][like]=чехол</strong> - поисковая фраза <br>
+                <strong>q[position][more]=0</strong> - убираем из поиска товары, которых уже нет на МП<br>
+                <strong>sort=position</strong> - сортируем результат позиции в выдаче МП (сначала популярные)<br>
+                <strong>per-page=20</strong> - количество товаров в выдаче<br>
+                <strong>q[mp][in]=wildberries,ozon,ali</strong> - по каким маркетплейсам ищем (можно указать любой через запятую)
+            </p>
+            <h3>Пример ответа</h3>
+            <pre>[...
+{
+id: 439
+id_brand: 74603550
+id_category: 15895
+id_seller: 9550
+mp: "ozon"
+name: "Чехол-обложка Goodchoice Slim для Pocketbook 606/616/627/628/632/633 (черный)"
+position: 1
+sku: 150165740
+}
+...]</pre>
+        </div>
+        <div class="ibox-title" id="search-product-sku" style="margin-top: 20px;"><h2>Поиск по артикулу товара</h2></div>
+        <div class="ibox-content">
+            <h3>Пример запроса 1</h3>
+            <pre>GET - https://api.moneyplace.io/v1/product?q[mp][equal]=ozon&amp;q[sku][equal]=165117234</pre>
+            <p>, где: <br>
+                <strong>q[sku][equal]=150165740</strong> - искомый артикул <br>
+                <strong>q[mp][equal]=ozon</strong> - какой маркетплейс <br>
+            </p>
+            <p>Можно добавить <strong>expand=category,seller,brand</strong> - для "раскрытия" вложенных сущностей</p>
+            <h3>Пример ответа</h3>
+            <pre>[...
+{
+amount: 28555 # кол-во товара на складах МП (fbo)
+comments_count: 20000
+created_at: 1604594354
+delivery_schema: 0
+discount: 21 # скидка в %
+id: 6810650 # системный ID товара
+id_brand: 11981
+id_category: 8989
+id_root: 5214366
+id_seller: 31565
+id_type: 436
+image: "https://images.wbstatic.net/c246x328/new/6580000/6583968-1.jpg"
+link: "/catalog/6583968/detail.aspx"
+mp: "wildberries"
+name: "Крем-спрей PERFECT HAIR многофункциональный 15 в 1 несмываемый, 250 мл"
+position: 1 # позиция в основной категории
+price_with_discount: 838 # цена без скидки
+rate: "5" # оценка
+real_price: 662 # цена продажи
+sku: 6583968
+store_amount: 0 # кол-во товара на складе поставщика (fbs)
+updated_at: 1621386266 # дата обновления timestamp
+}
+...]</pre>
+            <h3>Пример запроса 2</h3>
+            <pre>GET - https://api.moneyplace.io/search/products?q[mp][in]=wildberries,ozon,ali&amp;q[sku][equal]=150165740&amp;per-page=20</pre>
+            <p>, где: <br>
+                <strong>q[sku][equal]=150165740</strong> - искомый артикул <br>
+                <strong>q[mp][in]=wildberries,ozon,ali</strong> - по каким маркетплейсам ищем (можно указать любой через запятую)
+            </p>
+            <h3>Пример ответа</h3>
+            <pre>[...
+{
+id: 439 # системный ID товара
+id_brand: 74603550
+id_category: 15895
+id_seller: 9550
+mp: "ozon"
+name: "Чехол-обложка Goodchoice Slim для Pocketbook 606/616/627/628/632/633 (черный)"
+position: 1
+sku: 150165740
+}
+...]</pre>
+        </div>
+        <div class="ibox-title" id="search-product-type" style="margin-top: 20px;"><h2>Поиск по типу товара</h2></div>
+        <div class="ibox-content">
+            <h3>Пример запроса</h3>
+            <pre>GET - https://api.moneyplace.io/search/product-type?per-page=19&amp;q[mp][in]=wildberries,ozon&amp;q[name][like]=чехол</pre>
+            <p>, где: <br>
+                <strong>q[name][like]=чехол</strong> - поисковая фраза <br>
+                <strong>per-page=20</strong> - количество товаров в выдаче<br>
+                <strong>q[mp][in]=wildberries,ozon</strong> - по каким маркетплейсам ищем (можно указать любой через запятую)
+
+            </p>
+            <h3>Пример ответа</h3>
+            <pre>[...
+{
+id: 608 # системный ID типа товара
+id_mp: 3718
+mp: "wildberries"
+name: "Чехол для детского автокресла"
+}
+...]</pre>
+        </div>
+        <div class="ibox-title" id="search-category" style="margin-top: 20px;"><h2>Поиск по названию категории</h2></div>
+        <div class="ibox-content">
+            <h3>Пример запроса</h3>
+            <pre>GET - https://api.moneyplace.io/search/products?q[name][like]=электроника&amp;sort=-count&amp;q[count][more]=0&amp;per-page=20&amp;q[mp][in]=wildberries,ozon,ali</pre>
+            <p>, где: <br>
+                <strong>q[name][like]=электроника</strong> - поисковая фраза <br>
+                <strong>q[count][more]=0</strong> - убираем из поиска пустые/старые категории, в которых кол-во товаров 0<br>
+                <strong>sort=-count</strong> - сортируем по количеству товаров (сначала большие категории)<br>
+                <strong>per-page=20</strong> - количество категорий в выдаче<br>
+                <strong>q[mp][in]=wildberries,ozon,ali</strong> - по каким маркетплейсам ищем (можно указать любой через запятую)
+            </p>
+            <h3>Пример ответа</h3>
+            <pre>[...
+{
+count: 9489
+id: 1517 # системный ID категории
+id_mp: 8751
+mp: "ozon"
+name: "Электроника для авто"
+path: "Автотовары / Электроника для авто"
+}
+...]</pre>
+        </div>
+        <div class="ibox-title" id="search-seller" style="margin-top: 20px;"><h2>Поиск по продавцам</h2></div>
+        <div class="ibox-content">
+            <h3>Пример запроса</h3>
+            <pre>GET - https://api.moneyplace.io/search/sellers?per-page=20&amp;q[mp][in]=wildberries,ozon,ali&amp;q[name][like]=ООО</pre>
+            <p>, где: <br>
+                <strong>q[name][like]=ООО</strong> - поисковая фраза <br>
+                <strong>per-page=20</strong> - количество продавцов в выдаче<br>
+                <strong>q[mp][in]=wildberries,ozon</strong> - по каким маркетплейсам ищем (можно указать любой через запятую)
+
+            </p>
+            <h3>Пример ответа</h3>
+            <pre>[...
+{
+id: 108293 # системный ID продавца
+id_mp: 108293
+mp: "wildberries"
+name: "ООО "ЗОООПТ""
+}
+...]</pre>
+        </div>
+        <div class="ibox-title" id="search-brand" style="margin-top: 20px;"><h2>Поиск по брендам</h2></div>
+        <div class="ibox-content">
+            <h3>Пример запроса</h3>
+            <pre>GET - https://api.moneyplace.io/search/brands?per-page=20&amp;q[mp][in]=wildberries,ozon,ali&amp;q[name][like]=adidas</pre>
+            <p>, где: <br>
+                <strong>q[name][like]=adidas</strong> - поисковая фраза <br>
+                <strong>per-page=20</strong> - количество брендов в выдаче<br>
+                <strong>q[mp][in]=wildberries,ozon</strong> - по каким маркетплейсам ищем (можно указать любой через запятую)
+            </p>
+            <h3>Пример ответа</h3>
+            <pre>[...
+{
+id: 150577 # системный ID бренда
+id_mp: 87337386
+mp: "ozon"
+name: "Adidas"
+}
+...]</pre>
+        </div>
+        <div class="ibox-title" id="product-list" style="margin-top: 20px;"><h2>Список товаров</h2></div>
+        <div class="ibox-content">
+            <div>
+                <p>Получение статистики по продажам товаров. Отметим, что данная страница очень "тяжелая" так как агрегирует сотни миллионных данных,
+                    поэтому время ответа может занимать до 20 сек, в зависимости от параметров запроса.</p>
+                <h3>Ресурс</h3>
+                <pre>GET - https://api.moneyplace.io/statistic/product</pre>
+                <h3>Параметры запроса</h3>
+                <pre>GET - https://api.moneyplace.io/statistic/product?mp=wildberries&amp;type=fbo&amp;period=week&amp;sort=-turnover</pre>
+                <p>Выведет топ 20 товаров WildBerries за неделю остортированных по обороту, проданных со склада МП </p>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Параметр</th>
+                            <th>Тип данных</th>
+                            <th>Обязательный</th>
+                            <th>Значения</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>mp</td>
+                            <td>string</td>
+                            <td>Да</td>
+                            <td>
+                                wildberries - Вайлдберрис <br>
+                                ozon - Озон <br>
+                                ali - Алиэкспресс
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>type</td>
+                            <td>string</td>
+                            <td>Да</td>
+                            <td>
+                                fbo - продажи со склада МП <br>
+                                fbs - продажи со склада поставщика
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>period</td>
+                            <td>string</td>
+                            <td>Да</td>
+                            <td>
+                                week - за неделю <br>
+                                two_weeks - за две недели <br>
+                                month - за месяц
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>sort</td>
+                            <td>string</td>
+                            <td>Нет</td>
+                            <td>
+                                Сортировка <br>
+                                -turnover -  по обороту DESC<br>
+                                turnover -  по обороту ASC<br>
+                                -Sales - по кол-ву продаж DESC<br>
+                                Sales - по кол-ву продаж ASC
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>q[name][like]</td>
+                            <td>string</td>
+                            <td>Нет</td>
+                            <td>
+                                Фильтр по названию товара
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h3>Пример ответа</h3>
+                <pre>[...
+{
+Sales: "10414" # кол-во продаж за выбранный перид
+id_brand: 11981
+id_category: 8989
+id_seller: 31565
+id_type: 436
+mp: "wildberries"
+sku: 6583968 # артикул товара
+turnover: "5075552" # оборот продаж за выбранный перид
+product: {
+    amount: 28555 # кол-во товара на складах МП (fbo)
+    comments_count: 20000
+    created_at: 1604594354
+    delivery_schema: 0
+    discount: 21 # скидка в %
+    id: 6810650 # системный ID товара
+    id_brand: 11981
+    id_category: 8989
+    id_root: 5214366
+    id_seller: 31565
+    id_type: 436
+    image: "https://images.wbstatic.net/c246x328/new/6580000/6583968-1.jpg"
+    link: "/catalog/6583968/detail.aspx"
+    mp: "wildberries"
+    name: "Крем-спрей PERFECT HAIR многофункциональный 15 в 1 несмываемый, 250 мл"
+    position: 1 # позиция в основной категории
+    price_with_discount: 838 # цена без скидки
+    rate: "5" # оценка
+    real_price: 662 # цена продажи
+    sku: 6583968
+    store_amount: 0 # кол-во товара на складе поставщика (fbs)
+    updated_at: 1621386266 # дата обновления timestamp
+}
+seller: {
+    created_at: 1604573890
+    id: 31565
+    id_mp: 31565
+    mp: "wildberries"
+    name: "МЕГАПРОФСТИЛЬ ООО"
+    updated_at: 1604573890
+}
+brand: {
+    created_at: 1604593595
+    id: 98816
+    id_mp: 11981
+    mp: "wildberries"
+    name: "Ollin Professional"
+}
+category: {
+    childrens: "[]"
+    count: 20120
+    id: 7869
+    id_mp: 8989
+    id_parent: 8961
+    mp: "wildberries"
+    name: "Для роста волос"
+    path: "Красота / Волосы / Для роста волос"
+    products_count: 20464
+}
+...]</pre>
+            </div>
+        </div>
+    </div>
+    <div class="ibox-title" id="product-info" style="margin-top: 20px;"><h2>Информация о товаре</h2></div>
+    <div class="ibox-content">
+        <h3>Пример запроса</h3>
+        <p>В примере ниже "6810650" - <strong>системный ID товара</strong>, получить который можно из поиска или запросов с аналитикой</p>
+        <pre>GET - https://api.moneyplace.io/v1/product/6810650?expand=category,seller,brand</pre>
+        <p>, где: <br>
+            <strong>expand=category,seller,brand</strong> - "раскрытие" категории, продавца и бренда. Необязательные параметры.<br>
+        </p>
+        <h3>Пример ответа</h3>
+        <pre>{
+amount: 28555 # кол-во товара на складах МП (fbo)
+comments_count: 20000
+created_at: 1604594354
+delivery_schema: 0
+discount: 21 # скидка в %
+id: 6810650 # системный ID товара
+id_brand: 11981
+id_category: 8989
+id_root: 5214366
+id_seller: 31565
+id_type: 436
+image: "https://images.wbstatic.net/c246x328/new/6580000/6583968-1.jpg"
+link: "/catalog/6583968/detail.aspx"
+mp: "wildberries"
+name: "Крем-спрей PERFECT HAIR многофункциональный 15 в 1 несмываемый, 250 мл"
+position: 1 # позиция в основной категории
+price_with_discount: 838 # цена без скидки
+rate: "5" # оценка
+real_price: 662 # цена продажи
+sku: 6583968
+store_amount: 0 # кол-во товара на складе поставщика (fbs)
+updated_at: 1621386266 # дата обновления timestamp
+brand: {id: 98816, id_mp: 11981, mp: "wildberries", name: "Ollin Professional", created_at: 1604593595,…}
+seller: {id: 31565, id_mp: 31565, mp: "wildberries", name: "МЕГАПРОФСТИЛЬ ООО", created_at: 1604573890,…}
+category: {id: 7869, id_mp: 8989, mp: "wildberries",…}
+}</pre>
+    </div>
+    <div class="ibox-title" id="product-stat" style="margin-top: 20px;"><h2>Статистика продаж товара</h2></div>
+    <div class="ibox-content">
+        <h3>Пример запроса 1</h3>
+        <p>В примере ниже "6810650" - <strong>системный ID товара</strong>, получить который можно из поиска или запросов с аналитикой</p>
+        <pre>GET - https://api.moneyplace.io/statistic/product/charts/6810650?&amp;type=fbo&amp;period=week</pre>
+        <p>, где: <br>
+            <strong>type=fbo</strong> - продажи со склада МП <br>
+            <strong>period=week</strong> - период статистики неделя<br>
+        </p>
+        <h3>Пример запроса 2</h3>
+        <pre>GET - https://api.moneyplace.io/statistic/product/charts/6810650?type=fbo&amp;q[date][between]=1620345600,1621468800&amp;period=period</pre>
+        <p>, где: <br>
+            <strong>type=fbo</strong> - продажи со склада МП <br>
+            <strong>period=period</strong> - период статистики временной<br>
+            <strong>q[date][between]=1620345600,1621468800</strong> - период дат в формате timestamp<br>
+        </p>
+        <h3>Пример ответа</h3>
+        <pre>[...
+{
+avg_price: 445 # средняя цена продажи
+comments_count: "19734" # кол-во комментариев на текущий день
+comments_today: "97" # # кол-во комментариев за текущий день
+date: "2021-05-09" # дата
+discount: 53 # скидка в %
+position: 1 # позиция в основной категории
+price: 956 # цена продажи до скидки
+rating: 5 # рейтинг за текущий день
+total_amount: "25257" # кол-во на складах
+total_sale: "1360" # кол-во продаж
+total_sum: "605200" # оборот продаж
+}
+...]</pre>
+    </div>
+    <div class="ibox-title" id="product-position" style="margin-top: 20px;"><h2>Позиция товара в категориях</h2></div>
+    <div class="ibox-content">
+        <h3>Пример запроса 1</h3>
+        <p>В примере ниже "6810650" - <strong>системный ID товара</strong>, получить который можно из поиска или запросов с аналитикой</p>
+        <pre>GET - https://api.moneyplace.io/statistic/product-info/charts/6810650?period=week</pre>
+        <p>, где: <br>
+            <strong>period=week</strong> - период статистики неделя<br>
+        </p>
+        <h3>Пример запроса 2</h3>
+        <pre>GET - https://api.moneyplace.io/statistic/product-info/charts/6810650?q[date][between]=1620345600,1621468800&amp;period=period</pre>
+        <p>, где: <br>
+            <strong>period=period</strong> - период статистики временной<br>
+            <strong>q[date][between]=1620345600,1621468800</strong> - период дат в формате timestamp<br>
+        </p>
+        <h3>Пример ответа</h3>
+        <pre>[...
+{
+category: {
+    childrens: "[]"
+    count: 29218
+    id: 8113
+    id_mp: 60645
+    id_parent: 60506
+    mp: "wildberries"
+    name: "Косметика"
+    path: "Красота / Инструменты для парикмахеров / Косметика"
+}
+date_graph: ["2021-12-05", "2021-13-05", "2021-14-05", "2021-15-05", "2021-16-05", "2021-17-05", "2021-18-05"] # массив дат
+difference_graph: [0, 1215, -323, 64, 190, -76, -241] # массив изменений позиции в категории
+id_category: 60645
+position_graph: [1893, 678, 1001, 937, 747, 823, 1064] # массив позиций
+virtual_mp: "wildberries"
+}
+...]</pre>
+    </div>
+    <div class="ibox-title" id="category-list" style="margin-top: 20px;"><h2>Список категорий</h2></div>
+    <div class="ibox-content">
+        <div>
+            <h3>Ресурс</h3>
+            <pre>GET - https://api.moneyplace.io/statistic/category</pre>
+            <h3>Параметры запроса</h3>
+            <pre>GET - https://api.moneyplace.io/statistic/category?mp=wildberries&amp;type=fbo&amp;period=week&amp;sort=-turnover</pre>
+            <p>Выведет все родительские категории WildBerries за неделю остортированных по обороту, проданных со склада МП </p>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>Параметр</th>
+                    <th>Тип данных</th>
+                    <th>Обязательный</th>
+                    <th>Значения</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>mp</td>
+                    <td>string</td>
+                    <td>Нет</td>
+                    <td>
+                        Если не указать данный параметр - выведет категории всех маркетплейсов <br>
+                        wildberries - Вайлдберрис <br>
+                        ozon - Озон <br>
+                        ali - Алиэкспресс
+                    </td>
+                </tr>
+                <tr>
+                    <td>type</td>
+                    <td>string</td>
+                    <td>Да</td>
+                    <td>
+                        fbo - продажи со склада МП <br>
+                        fbs - продажи со склада поставщика
+                    </td>
+                </tr>
+                <tr>
+                    <td>period</td>
+                    <td>string</td>
+                    <td>Да</td>
+                    <td>
+                        week - за неделю <br>
+                        two_weeks - за две недели <br>
+                        month - за месяц <br>
+                        period - timestamp (только для конечных подкатегорий) <br>
+                        Пример: q[date][between]=1620345600,1621468800&amp;period=period
+                    </td>
+                </tr>
+                <tr>
+                    <td>sort</td>
+                    <td>string</td>
+                    <td>Нет</td>
+                    <td>
+                        Сортировка происходит по любому полю, приходящему в ответ, например если
+                        хотите отсортировать по параметру "tstc", то sort=tstc отсортирует по возрастанию (ASC),
+                        а sort=-tstc по убыванию (DESC)
+                    </td>
+                </tr>
+                <tr>
+                    <td>q[name][like]</td>
+                    <td>string</td>
+                    <td>Нет</td>
+                    <td>
+                        Фильтр по названию категории
+                    </td>
+                </tr>
+                <tr>
+                    <td>id</td>
+                    <td>integer</td>
+                    <td>Нет</td>
+                    <td>
+                        Получить дочерние категории, например id=3195 - выведет подкатегории категории с ID 3195
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            <h3>Пример ответа</h3>
+            <pre>[...
+{
+average_bill: 998.4 # средний чек
+brands_count: "15913" # кол-во брендов
+products_count: "588291" # кол-во уникальных товаров
+sellers_count: "10670" # кол-во продавцов
+total_sales: "1942053" # кол-во продаж
+tstc: 182 # кол-во продаж на 1 продавца
+tsts: 3.3 # кол-во продаж на 1 товар
+turnover: "1939081232" # оборот заказов
+category: {
+    childrens: "[250, 23989, 254, 11884, 58474, 11888]"
+    count: 20120
+    id: 7869 # системный ID категории
+    id_mp: 8989
+    id_parent: 8961
+    mp: "wildberries"
+    name: "Для роста волос"
+    path: "Красота / Волосы / Для роста волос"
+    products_count: 20464
+}
+...]</pre>
+        </div>
+    </div>
+    <div class="ibox-title" id="category-childs" style="margin-top: 20px;"><h2>Получение дочерних категорий</h2></div>
+    <div class="ibox-content">
+        <div>
+            <h3>Ресурс</h3>
+            <pre>GET - https://api.moneyplace.io/statistic/category</pre>
+            <h3>Параметры запроса</h3>
+            <pre>GET - https://api.moneyplace.io/statistic/category?id=3273&amp;mp=wildberries&amp;type=fbo&amp;period=week&amp;sort=-turnover</pre>
+            <p>Выведет все подкатегории категории WildBerries с системным ID 3273 за неделю остортированных по обороту, проданных со склада МП </p>
+            <h3>Пример ответа</h3>
+            <pre>[...
+{
+average_bill: 998.4 # средний чек
+brands_count: "15913" # кол-во брендов
+products_count: "588291" # кол-во уникальных товаров
+sellers_count: "10670" # кол-во продавцов
+total_sales: "1942053" # кол-во продаж
+tstc: 182 # кол-во продаж на 1 продавца
+tsts: 3.3 # кол-во продаж на 1 товар
+turnover: "1939081232" # оборот заказов
+category: {
+    childrens: "[250, 23989, 254, 11884, 58474, 11888]"
+    count: 20120
+    id: 7869 # системный ID категории
+    id_mp: 8989
+    id_parent: 3273 # системный ID родительской категории
+    mp: "wildberries"
+    name: "Для роста волос"
+    path: "Красота / Волосы / Для роста волос"
+    products_count: 20464
+}
+...]</pre>
+        </div>
+    </div>
+    <div class="ibox-title" id="category-info" style="margin-top: 20px;"><h2>Информация о категории</h2></div>
+    <div class="ibox-content">
+        <h3>Пример запроса</h3>
+        <p>В примере ниже "3273" - <strong>системный ID категории</strong>, получить который можно из поиска или запросов с аналитикой</p>
+        <pre>GET - https://api.moneyplace.io/v1/category/3273</pre>
+        <h3>Пример ответа</h3>
+        <pre>{
+childrens: []
+count: 85931
+id: 3273
+id_mp: 8142
+id_parent: 366
+link: "/tops_tshirts/catalog?kind=2&amp;subject=185;192;219;1206;2230"
+mp: "wildberries"
+name: "Футболки и топы"
+path: "Женщинам / Одежда / Футболки и топы"
+products_count: 97047
+}</pre>
+    </div>
+    <div class="ibox-title" id="category-charts" style="margin-top: 20px;"><h2>Статистика продаж категории</h2></div>
+    <div class="ibox-content">
+        <h3>Пример запроса 1</h3>
+        <p>В примере ниже "3273" - <strong>системный ID категории</strong>, получить который можно из поиска или запросов с аналитикой</p>
+        <pre>GET - https://api.moneyplace.io/statistic/category/charts/3273?type=fbo&amp;period=week</pre>
+        <p>, где: <br>
+            <strong>type=fbo</strong> - продажи со склада МП <br>
+            <strong>period=week</strong> - период статистики неделя<br>
+        </p>
+        <h3>Пример запроса 2</h3>
+        <pre>GET - https://api.moneyplace.io/statistic/category/charts/3273?type=fbo&amp;q[date][between]=1620345600,1621468800&amp;period=period</pre>
+        <p>, где: <br>
+            <strong>type=fbo</strong> - продажи со склада МП <br>
+            <strong>period=period</strong> - период статистики временной<br>
+            <strong>q[date][between]=1620345600,1621468800</strong> - период дат в формате timestamp<br>
+        </p>
+        <h3>Пример ответа</h3>
+        <pre>[...
+{
+avg_price: 610.8 # средняя цена продажи
+date: "2021-05-07"
+total_amount: "4712910" # кол-во товаров на складах
+total_sale: "96020" # кол-во продаж
+total_sum: "58651542" # оборот продаж
+}
+...]</pre>
+    </div>
+    <div class="ibox-title" id="category-products" style="margin-top: 20px;"><h2>Статистика продаж товаров в категории</h2></div>
+    <div class="ibox-content">
+        <h3>Пример запроса 1</h3>
+        <p>В примере ниже "3273" - <strong>системный ID категории</strong>, получить который можно из поиска или запросов с аналитикой</p>
+        <pre>GET - https://api.moneyplace.io/statistic/category/3273?type=fbo&amp;period=week&amp;sort=-turnover&amp;q[price][between]=107,25480</pre>
+        <p>, где: <br>
+            <strong>type=fbo</strong> - продажи со склада МП <br>
+            <strong>period=week</strong> - период статистики неделя<br>
+            <strong>sort=-turnover</strong> - сортировка по обороту (DESC)<br>
+            <strong>q[price][between]=107,25480</strong> - цена между 107 и 25480 руб.<br>
+        </p>
+        <h3>Пример запроса 2</h3>
+        <pre>GET - https://api.moneyplace.io/statistic/category/3273?type=fbo&amp;q[date][between]=1620345600,1621468800&amp;period=period&amp;sort=-turnover&amp;q[price][between]=107,25480&amp;per-page=500&amp;page=2</pre>
+        <p>, где: <br>
+            <strong>type=fbo</strong> - продажи со склада МП <br>
+            <strong>period=period</strong> - период статистики временной<br>
+            <strong>q[date][between]=1620345600,1621468800</strong> - период дат в формате timestamp<br>
+            <strong>sort=-turnover</strong> - сортировка по обороту (DESC)<br>
+            <strong>q[price][between]=107,25480</strong> - цена между 107 и 25480 руб.<br>
+            <strong>per-page=500</strong> - 500 товаров выведет в запросе<br>
+            <strong>page=2</strong> - страница 2<br>
+        </p>
+        <h3>Фильтры</h3>
+        <p>Фильтровать можно по любому полю в ответе, например если хотитет получть товары с оборотом между
+            10000 и 1000000 руб - добавляйте GET параметр "q[turnover][between]=10000,1000000"</p>
+        <h3>Сортировки</h3>
+        <p>Сортировать можно по полям loses, turnover, total_sales. Например sort=total_sales отсортирует данные по кол-ву продаж в
+            порядке возрастания ASC, а sort=-total_sales в порядке убывания</p>
+        <h3>Пример ответа</h3>
+        <pre>[...
+{
+avg_position: 2.16 # средняя позиция в категории
+avg_price: 1044  # средняя цена продажи
+days_in_stock: "7"  # дней в наличии в выбранном периоде
+days_with_sales: "4"  # дней с продажами
+id_brand: 77602
+id_category: 8142
+id_seller: 25107
+loses: 0 # упущенная выручка вызванная обнулением остатков
+mp: "wildberries"
+rating: 5 # рейтинг
+reviews: 1252 # отзывы
+sku: 13986541
+total_days_in_period: "7" # кол-во дней в периоде в которых была получена информация о товаре
+total_sales: "1331" # кол-во продаж
+turnover: "1405108" # оборот заказов
+date_graph: ["2021-05-16", "2021-05-17", "2021-05-18", "2021-05-13", "2021-05-14", "2021-05-15", "2021-05-12"]  # массив с днями
+sale_graph: [137, 0, 0, 0, 426, 426, 342]  # массив с продажами по дням
+brand: {id: 69013, id_mp: 77602, mp: "wildberries", name: "ALILA", created_at: 1604561335,…}
+category: {id: 3273, mp: "wildberries", id_mp: 8142, id_parent: 366,…}
+product: {id: 4423351, name: "Футболка женская", mp: "wildberries", sku: 13986541, real_price: 1160,…}
+seller: {id: 25107, id_mp: 25107, name: "Тюрина Вероника Валерьевна ИП", mp: "wildberries",…}
+}
+...]</pre>
+    </div>
+    <div class="ibox-title" id="category-brand" style="margin-top: 20px;"><h2>Статистика брендов в категории</h2></div>
+    <div class="ibox-content">
+        <p>В примере ниже "3273" - <strong>системный ID категории</strong>, получить который можно из поиска или запросов с аналитикой</p>
+        <h3>Пример запроса</h3>
+        <pre>GET - https://api.moneyplace.io/statistic/seller?mp=wildberries&amp;q[id_mp_category][equal]=3273&amp;type=fbo&amp;q[date][between]=1620345600,1621468800&amp;period=period&amp;sort=-turnover&amp;q[price][between]=107,25480</pre>
+        <p>, где: <br>
+            <strong>type=fbo</strong> - продажи со склада МП <br>
+            <strong>period=period</strong> - период статистики временной<br>
+            <strong>q[date][between]=1620345600,1621468800</strong> - период дат в формате timestamp<br>
+            <strong>sort=-turnover</strong> - сортировка по обороту (DESC)<br>
+            <strong>q[price][between]=107,25480</strong> - цена между 107 и 25480 руб.<br>
+            <strong>q[id_mp_category][equal]=3273</strong> - системный ID категории<br>
+        </p>
+        <h3>Пример ответа</h3>
+        <pre>[...
+{
+average_bill: 361.4
+brand: {id: 56392, id_mp: 3991, mp: "wildberries", name: "ТВОЕ", created_at: 1604555384,…}
+id_brand: 3991
+mp: "wildberries"
+products_count: "2906"
+rating: 4.7
+total_sales: "114932"
+turnover: "41544867"
+}
+...]</pre>
+    </div>
+    <div class="ibox-title" id="category-seller" style="margin-top: 20px;"><h2>Статистика продавцов в категории</h2></div>
+    <div class="ibox-content">
+        <p>В примере ниже "3273" - <strong>системный ID категории</strong>, получить который можно из поиска или запросов с аналитикой</p>
+        <h3>Пример запроса</h3>
+        <pre>GET - https://api.moneyplace.io/statistic/seller?mp=wildberries&amp;q[id_mp_category][equal]=3273&amp;type=fbo&amp;q[date][between]=1620345600,1621468800&amp;period=period&amp;sort=-turnover&amp;q[price][between]=94,25480</pre>
+        <p>, где: <br>
+            <strong>type=fbo</strong> - продажи со склада МП <br>
+            <strong>period=period</strong> - период статистики временной<br>
+            <strong>q[date][between]=1620345600,1621468800</strong> - период дат в формате timestamp<br>
+            <strong>sort=-turnover</strong> - сортировка по обороту (DESC)<br>
+            <strong>q[price][between]=107,25480</strong> - цена между 107 и 25480 руб.<br>
+            <strong>q[id_mp_category][equal]=3273</strong> - системный ID категории<br>
+        </p>
+        <h3>Пример ответа</h3>
+        <pre>[...
+{
+average_bill: 1515.1
+brands_count: "1026"
+id_seller: 18545
+mp: "wildberries"
+products_count: "22575"
+rating: 4.2
+seller: {id: 18545, id_mp: 18545, name: "ВАЙЛДБЕРРИЗ ООО", mp: "wildberries", created_at: 1604555390,…}
+total_sales: "97878"
+turnover: "148297398
+}
+...]</pre>
+    </div>
+
+
+
+    <div class="ibox-title" id="seller-list" style="margin-top: 20px;"><h2>Список продавцов</h2></div>
+    <div class="ibox-content">
+        <div>
+            <h3>Ресурс</h3>
+            <pre>GET - https://api.moneyplace.io/statistic/seller</pre>
+            <h3>Параметры запроса</h3>
+            <pre>GET - https://api.moneyplace.io/statistic/seller?mp=wildberries&amp;type=fbo&amp;period=week&amp;sort=-turnover</pre>
+            <p>Выведет всех продавцов WildBerries за неделю остортированных по обороту, проданных со склада МП</p>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>Параметр</th>
+                    <th>Тип данных</th>
+                    <th>Обязательный</th>
+                    <th>Значения</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>mp</td>
+                    <td>string</td>
+                    <td>Нет</td>
+                    <td>
+                        Если не указать данный параметр - выведет категории всех маркетплейсов <br>
+                        wildberries - Вайлдберрис <br>
+                        ozon - Озон <br>
+                        ali - Алиэкспресс
+                    </td>
+                </tr>
+                <tr>
+                    <td>type</td>
+                    <td>string</td>
+                    <td>Да</td>
+                    <td>
+                        fbo - продажи со склада МП <br>
+                        fbs - продажи со склада поставщика
+                    </td>
+                </tr>
+                <tr>
+                    <td>period</td>
+                    <td>string</td>
+                    <td>Да</td>
+                    <td>
+                        week - за неделю <br>
+                        two_weeks - за две недели <br>
+                        month - за месяц <br>
+                        period - timestamp (только для конкретного продавца) <br>
+                        Пример: q[date][between]=1620345600,1621468800&amp;period=period
+                    </td>
+                </tr>
+                <tr>
+                    <td>q[name][like]</td>
+                    <td>string</td>
+                    <td>Нет</td>
+                    <td>
+                        Фильтр по названию продавца
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            <h3>Фильтры</h3>
+            <p>Фильтровать можно по любому полю в ответе, например если хотитет получть продавцов с оборотом между
+                10000 и 1000000 руб - добавляйте GET параметр "q[turnover][between]=10000,1000000"</p>
+            <h3>Сортировки</h3>
+            <p>Сортировать можно по полям turnover, total_sales. Например sort=total_sales отсортирует данные по кол-ву продаж в
+                порядке возрастания ASC, а sort=-total_sales в порядке убывания</p>
+            <h3>Пример ответа</h3>
+            <pre>[...
+{
+average_bill: 1252.7 # средний чек
+brands_count: "5" # кол-во брендов
+id_seller: 104499 # системный ID продавца
+mp: "wildberries"
+products_count: "4965" # кол-во товаров
+rating: 4.4 # рейтинг
+total_sales: "166585" # кол-во продаж
+turnover: "208683782" # оборот
+seller: {
+    created_at: 1616189771
+    id: 104499 # системный ID продавца
+    id_mp: 104499
+    mp: "wildberries"
+    name: "Акционерное общество "МЭЛОН ФЭШН ГРУП""
+    updated_at: 1616189771
+}
+...]</pre>
+        </div>
+    </div>
+    <div class="ibox-title" id="seller-info" style="margin-top: 20px;"><h2>Информация о продавце</h2></div>
+    <div class="ibox-content">
+        <h3>Пример запроса</h3>
+        <p>В примере ниже "18545" - <strong>системный ID продавца</strong>, получить который можно из поиска или запросов с аналитикой</p>
+        <pre>GET - https://api.moneyplace.io/v1/seller/18545</pre>
+        <h3>Пример ответа</h3>
+        <pre>{
+created_at: 1604555390
+id: 18545
+id_mp: 18545
+mp: "wildberries"
+name: "ВАЙЛДБЕРРИЗ ООО"
+updated_at: 1604555390
+}</pre>
+    </div>
+    <div class="ibox-title" id="seller-stat" style="margin-top: 20px;"><h2>Статистика продаж продавца</h2></div>
+    <div class="ibox-content">
+        <h3>Пример запроса 1</h3>
+        <p>В примере ниже "18545" - <strong>системный ID продавца</strong>, получить который можно из поиска или запросов с аналитикой</p>
+        <pre>GET - https://api.moneyplace.io/statistic/seller/charts/18545?type=fbo&amp;period=week</pre>
+        <p>, где: <br>
+            <strong>type=fbo</strong> - продажи со склада МП <br>
+            <strong>period=week</strong> - период статистики неделя<br>
+        </p>
+        <h3>Пример запроса 2</h3>
+        <pre>GET - https://api.moneyplace.io/statistic/seller/charts/18545?type=fbo&amp;q[date][between]=1620345600,1621468800&amp;period=period</pre>
+        <p>, где: <br>
+            <strong>type=fbo</strong> - продажи со склада МП <br>
+            <strong>period=period</strong> - период статистики временной<br>
+            <strong>q[date][between]=1620345600,1621468800</strong> - период дат в формате timestamp<br>
+        </p>
+        <h3>Пример ответа</h3>
+        <pre>[...
+{
+avg_price: 610.8 # средняя цена продажи
+date: "2021-05-07"
+total_amount: "4712910" # кол-во товаров на складах
+total_sale: "96020" # кол-во продаж
+total_sum: "58651542" # оборот продаж
+}
+...]</pre>
+    </div>
+    <div class="ibox-title" id="seller-products" style="margin-top: 20px;"><h2>Статистика продаж товаров продавца</h2></div>
+    <div class="ibox-content">
+        <h3>Пример запроса 1</h3>
+        <p>В примере ниже "18545" - <strong>системный ID продавца</strong>, получить который можно из поиска или запросов с аналитикой</p>
+        <pre>GET - https://api.moneyplace.io/statistic/seller/18545?type=fbo&amp;period=week&amp;sort=-turnover</pre>
+        <p>, где: <br>
+            <strong>type=fbo</strong> - продажи со склада МП <br>
+            <strong>period=week</strong> - период статистики неделя<br>
+            <strong>sort=-turnover</strong> - сортировка по обороту (DESC)<br>
+        </p>
+        <h3>Пример запроса 2</h3>
+        <pre>GET - https://api.moneyplace.io/statistic/seller/18545?type=fbo&amp;q[date][between]=1620345600,1621468800&amp;period=period&amp;sort=-turnover&amp;per-page=500&amp;page=2</pre>
+        <p>, где: <br>
+            <strong>type=fbo</strong> - продажи со склада МП <br>
+            <strong>period=period</strong> - период статистики временной<br>
+            <strong>q[date][between]=1620345600,1621468800</strong> - период дат в формате timestamp<br>
+            <strong>sort=-turnover</strong> - сортировка по обороту (DESC)<br>
+            <strong>per-page=500</strong> - 500 товаров выведет в запросе<br>
+            <strong>page=2</strong> - страница 2<br>
+        </p>
+        <h3>Фильтры</h3>
+        <p>Фильтровать можно по любому полю в ответе, например если хотитет получть товары с оборотом между
+            10000 и 1000000 руб - добавляйте GET параметр "q[turnover][between]=10000,1000000"</p>
+        <h3>Сортировки</h3>
+        <p>Сортировать можно по полям loses, turnover, total_sales. Например sort=total_sales отсортирует данные по кол-ву продаж в
+            порядке возрастания ASC, а sort=-total_sales в порядке убывания</p>
+        <h3>Пример ответа</h3>
+        <pre>[...
+{
+avg_position: 2.16 # средняя позиция в категории
+avg_price: 1044  # средняя цена продажи
+days_in_stock: "7"  # дней в наличии в выбранном периоде
+days_with_sales: "4"  # дней с продажами
+id_brand: 77602
+id_category: 8142
+id_seller: 25107
+loses: 0 # упущенная выручка вызванная обнулением остатков
+mp: "wildberries"
+rating: 5 # рейтинг
+reviews: 1252 # отзывы
+sku: 13986541
+total_days_in_period: "7" # кол-во дней в периоде в которых была получена информация о товаре
+total_sales: "1331" # кол-во продаж
+turnover: "1405108" # оборот заказов
+date_graph: ["2021-05-16", "2021-05-17", "2021-05-18", "2021-05-13", "2021-05-14", "2021-05-15", "2021-05-12"]  # массив с днями
+sale_graph: [137, 0, 0, 0, 426, 426, 342]  # массив с продажами по дням
+brand: {id: 69013, id_mp: 77602, mp: "wildberries", name: "ALILA", created_at: 1604561335,…}
+category: {id: 3273, mp: "wildberries", id_mp: 8142, id_parent: 366,…}
+product: {id: 4423351, name: "Футболка женская", mp: "wildberries", sku: 13986541, real_price: 1160,…}
+seller: {id: 25107, id_mp: 25107, name: "Тюрина Вероника Валерьевна ИП", mp: "wildberries",…}
+}
+...]</pre>
+    </div>
+
+    <div class="ibox-title" id="brand-list" style="margin-top: 20px;"><h2>Список брендов</h2></div>
+    <div class="ibox-content">
+        <div>
+            <h3>Ресурс</h3>
+            <pre>GET - https://api.moneyplace.io/statistic/brand</pre>
+            <h3>Параметры запроса</h3>
+            <pre>GET - https://api.moneyplace.io/statistic/brand?mp=wildberries&amp;type=fbo&amp;period=week&amp;sort=-turnover</pre>
+            <p>Выведет всех продавцов WildBerries за неделю остортированных по обороту, проданных со склада МП</p>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>Параметр</th>
+                    <th>Тип данных</th>
+                    <th>Обязательный</th>
+                    <th>Значения</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>mp</td>
+                    <td>string</td>
+                    <td>Нет</td>
+                    <td>
+                        Если не указать данный параметр - выведет категории всех маркетплейсов <br>
+                        wildberries - Вайлдберрис <br>
+                        ozon - Озон <br>
+                        ali - Алиэкспресс
+                    </td>
+                </tr>
+                <tr>
+                    <td>type</td>
+                    <td>string</td>
+                    <td>Да</td>
+                    <td>
+                        fbo - продажи со склада МП <br>
+                        fbs - продажи со склада поставщика
+                    </td>
+                </tr>
+                <tr>
+                    <td>period</td>
+                    <td>string</td>
+                    <td>Да</td>
+                    <td>
+                        week - за неделю <br>
+                        two_weeks - за две недели <br>
+                        month - за месяц <br>
+                        period - timestamp (только для конкретного продавца) <br>
+                        Пример: q[date][between]=1620345600,1621468800&amp;period=period
+                    </td>
+                </tr>
+                <tr>
+                    <td>q[name][like]</td>
+                    <td>string</td>
+                    <td>Нет</td>
+                    <td>
+                        Фильтр по названию бренда
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            <h3>Фильтры</h3>
+            <p>Фильтровать можно по любому полю в ответе, например если хотитет получть бренды с оборотом между
+                10000 и 1000000 руб - добавляйте GET параметр "q[turnover][between]=10000,1000000"</p>
+            <h3>Сортировки</h3>
+            <p>Сортировать можно по полям turnover, total_sales. Например sort=total_sales отсортирует данные по кол-ву продаж в
+                порядке возрастания ASC, а sort=-total_sales в порядке убывания</p>
+            <h3>Пример ответа</h3>
+            <pre>[...
+{
+average_bill: 1252.7 # средний чек
+brands_count: "5" # кол-во брендов
+id_seller: 104499 # системный ID продавца
+mp: "wildberries"
+products_count: "4965" # кол-во товаров
+rating: 4.4 # рейтинг
+total_sales: "166585" # кол-во продаж
+turnover: "208683782" # оборот
+brand: {
+    created_at: 1604555643
+    id: 56601
+    id_mp: 21
+    mp: "wildberries"
+    name: "adidas"
+    updated_at: 1604555643
+}
+...]</pre>
+        </div>
+    </div>
+    <div class="ibox-title" id="brand-info" style="margin-top: 20px;"><h2>Информация о бренде</h2></div>
+    <div class="ibox-content">
+        <h3>Пример запроса</h3>
+        <p>В примере ниже "18545" - <strong>системный ID бренда</strong>, получить который можно из поиска или запросов с аналитикой</p>
+        <pre>GET - https://api.moneyplace.io/v1/brand/18545</pre>
+        <h3>Пример ответа</h3>
+        <pre>{
+created_at: 1604555390
+id: 18545
+id_mp: 18545
+mp: "wildberries"
+name: "Adidas"
+updated_at: 1604555390
+}</pre>
+    </div>
+    <div class="ibox-title" id="brand-stat" style="margin-top: 20px;"><h2>Статистика продаж бренда</h2></div>
+    <div class="ibox-content">
+        <h3>Пример запроса 1</h3>
+        <p>В примере ниже "18545" - <strong>системный ID бренда</strong>, получить который можно из поиска или запросов с аналитикой</p>
+        <pre>GET - https://api.moneyplace.io/statistic/brand/charts/18545?type=fbo&amp;period=week</pre>
+        <p>, где: <br>
+            <strong>type=fbo</strong> - продажи со склада МП <br>
+            <strong>period=week</strong> - период статистики неделя<br>
+        </p>
+        <h3>Пример запроса 2</h3>
+        <pre>GET - https://api.moneyplace.io/statistic/brand/charts/18545?type=fbo&amp;q[date][between]=1620345600,1621468800&amp;period=period</pre>
+        <p>, где: <br>
+            <strong>type=fbo</strong> - продажи со склада МП <br>
+            <strong>period=period</strong> - период статистики временной<br>
+            <strong>q[date][between]=1620345600,1621468800</strong> - период дат в формате timestamp<br>
+        </p>
+        <h3>Пример ответа</h3>
+        <pre>[...
+{
+avg_price: 610.8 # средняя цена продажи
+date: "2021-05-07"
+total_amount: "4712910" # кол-во товаров на складах
+total_sale: "96020" # кол-во продаж
+total_sum: "58651542" # оборот продаж
+}
+...]</pre>
+    </div>
+    <div class="ibox-title" id="brand-products" style="margin-top: 20px;"><h2>Статистика продаж товаров бренда</h2></div>
+    <div class="ibox-content">
+        <h3>Пример запроса 1</h3>
+        <p>В примере ниже "18545" - <strong>системный ID бренда</strong>, получить который можно из поиска или запросов с аналитикой</p>
+        <pre>GET - https://api.moneyplace.io/statistic/brand/18545?type=fbo&amp;period=week&amp;sort=-turnover</pre>
+        <p>, где: <br>
+            <strong>type=fbo</strong> - продажи со склада МП <br>
+            <strong>period=week</strong> - период статистики неделя<br>
+            <strong>sort=-turnover</strong> - сортировка по обороту (DESC)<br>
+        </p>
+        <h3>Пример запроса 2</h3>
+        <pre>GET - https://api.moneyplace.io/statistic/brand/18545?type=fbo&amp;q[date][between]=1620345600,1621468800&amp;period=period&amp;sort=-turnover&amp;per-page=500&amp;page=2</pre>
+        <p>, где: <br>
+            <strong>type=fbo</strong> - продажи со склада МП <br>
+            <strong>period=period</strong> - период статистики временной<br>
+            <strong>q[date][between]=1620345600,1621468800</strong> - период дат в формате timestamp<br>
+            <strong>sort=-turnover</strong> - сортировка по обороту (DESC)<br>
+            <strong>per-page=500</strong> - 500 товаров выведет в запросе<br>
+            <strong>page=2</strong> - страница 2<br>
+        </p>
+        <h3>Фильтры</h3>
+        <p>Фильтровать можно по любому полю в ответе, например если хотитет получть товары с оборотом между
+            10000 и 1000000 руб - добавляйте GET параметр "q[turnover][between]=10000,1000000"</p>
+        <h3>Сортировки</h3>
+        <p>Сортировать можно по полям loses, turnover, total_sales. Например sort=total_sales отсортирует данные по кол-ву продаж в
+            порядке возрастания ASC, а sort=-total_sales в порядке убывания</p>
+        <h3>Пример ответа</h3>
+        <pre>[...
+{
+avg_position: 2.16 # средняя позиция в категории
+avg_price: 1044  # средняя цена продажи
+days_in_stock: "7"  # дней в наличии в выбранном периоде
+days_with_sales: "4"  # дней с продажами
+id_brand: 77602
+id_category: 8142
+id_seller: 25107
+loses: 0 # упущенная выручка вызванная обнулением остатков
+mp: "wildberries"
+rating: 5 # рейтинг
+reviews: 1252 # отзывы
+sku: 13986541
+total_days_in_period: "7" # кол-во дней в периоде в которых была получена информация о товаре
+total_sales: "1331" # кол-во продаж
+turnover: "1405108" # оборот заказов
+date_graph: ["2021-05-16", "2021-05-17", "2021-05-18", "2021-05-13", "2021-05-14", "2021-05-15", "2021-05-12"]  # массив с днями
+sale_graph: [137, 0, 0, 0, 426, 426, 342]  # массив с продажами по дням
+brand: {id: 69013, id_mp: 77602, mp: "wildberries", name: "ALILA", created_at: 1604561335,…}
+category: {id: 3273, mp: "wildberries", id_mp: 8142, id_parent: 366,…}
+product: {id: 4423351, name: "Футболка женская", mp: "wildberries", sku: 13986541, real_price: 1160,…}
+seller: {id: 25107, id_mp: 25107, name: "Тюрина Вероника Валерьевна ИП", mp: "wildberries",…}
+}
+...]</pre>
+    </div>
+</div>
+</div>
+
+<script src="/client/js/pages/api.js?id=1"></script></div>
+
+    <div class="footer">
+
+    </div>
+
+</div>
      
   </body>
 </html>

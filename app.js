@@ -37,6 +37,11 @@ connection.end(function(err) {
   console.log("Подключение закрыто");
 });
 
+
+app.use(express.static('public'));
+
+app.use(express.static(`${__dirname}/app/views`));
+
 app.set("view engine", "ejs");
 app.set("views", "./views");
 
