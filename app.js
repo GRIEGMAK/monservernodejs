@@ -1,18 +1,41 @@
 const express = require('express');
 require('dotenv').config();
 const authRouter = require('./authRouter')
-const sequelize = require('./db')
+// const sequelize = require('./db')
 var https = require('https');
+const mysql = require("mysql2");
 
 const app = express();
 
 const PORT = process.env.PORT || 5000;
-const conString = "postgres://nodejs_user:mypassword1234@localhost:5432/db_1";
 
 app.use(express.static("public"));
 app.use(express.json())
 app.use("/auth", authRouter);
 
+
+const connection = mysql.createConnection({
+  host: "localhost",
+  port: 3306,
+  user: "root",
+  database: "db_1_info",
+});
+
+connection.connect(function(err){
+  if (err) {
+    return console.error("Ошибка: " + err.message);
+  }
+  else{
+    console.log("Подключение к серверу MySQL успешно установлено");
+  }
+});
+
+connection.end(function(err) {
+  if (err) {
+    return console.log("Ошибка: " + err.message);
+  }
+  console.log("Подключение закрыто");
+});
 
 app.set("view engine", "ejs");
 app.set("views", "./views");
@@ -59,8 +82,6 @@ var req = https.request(options, function (res) {
 
 const start = async () => {
     try {
-        await sequelize.authenticate();
-        await sequelize.sync()
         app.listen(PORT, () => {console.log(`server started on port: ${PORT}`);});
     } catch (e) { console.log(e);}
 };
