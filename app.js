@@ -7,7 +7,7 @@ const mysql = require("mysql2");
 
 const app = express();
 
-const PORT = process.env.PORT || 57989;
+const PORT = process.env.PORT || 5000;
 
 app.use(express.static("public"));
 app.use(express.json())
@@ -38,7 +38,10 @@ connection.end(function(err) {
 });
 
 
-// app.use(express.static('public'));
+app.use(compression()); //Compress all routes
+
+app.use(express.static(path.join(__dirname, 'public')));
+
 app.use(express.static(__dirname + '/public'));
 
 app.use(express.static(`${__dirname}/app/views`));
