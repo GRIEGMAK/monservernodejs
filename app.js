@@ -2,6 +2,7 @@ const express = require('express');
 const compression = require('compression')
 require('dotenv').config();
 const authRouter = require('./authRouter')
+const path = require('path');
 // const sequelize = require('./db')
 var https = require('https');
 const mysql = require("mysql2");
