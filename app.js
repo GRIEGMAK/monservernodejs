@@ -12,7 +12,10 @@ const app = express();
 
 const PORT = process.env.PORT || 5000;
 
-app.use(favicon(__dirname + '/public/images/favicon.png'));
+// app.use(favicon(__dirname + '/public/images/favicon.png'));
+const faviconPath = path.join(__dirname, 'public/images/favicon.png')
+
+app.use(favicon(faviconPath));
 app.use(express.static("public"));
 app.use(express.json())
 app.use("/auth", authRouter);
