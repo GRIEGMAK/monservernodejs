@@ -6,11 +6,13 @@ const path = require('path');
 // const sequelize = require('./db')
 var https = require('https');
 const mysql = require("mysql2");
+var favicon = require('serve-favicon');
 
 const app = express();
 
 const PORT = process.env.PORT || 5000;
 
+app.use(favicon(__dirname + '/public/images/favicon.png'));
 app.use(express.static("public"));
 app.use(express.json())
 app.use("/auth", authRouter);
