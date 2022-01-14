@@ -1,4 +1,5 @@
 const express = require('express');
+const compression = require('compression')
 require('dotenv').config();
 const authRouter = require('./authRouter')
 // const sequelize = require('./db')
@@ -38,7 +39,7 @@ connection.end(function(err) {
 });
 
 
-app.use(compression()); //Compress all routes
+app.use(compression()); 
 
 app.use(express.static(path.join(__dirname, 'public')));
 
