@@ -106,8 +106,15 @@ app.get("/", function(req, res) {
     res.render("homePage");
 });
 
+app.get("/index.html", function(req, res) {
+    res.render("homePage");
+});
+
+app.get("/politika-konfidencialnosti/", function(req, res) {
+  res.render("politika-konfidencialnosti");
+});
 
 
-app.get("/test", function(req, res) {
-    res.render("testPage");
+app.get("/register.html", function(req, res) {
+    res.render("register");
 });
