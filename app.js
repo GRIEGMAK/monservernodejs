@@ -124,6 +124,118 @@ app.get("/register.html", function(req, res) {
     res.render("register");
 });
 
-app.get("/client/", function(req, res) {
+app.get("/register", function(req, res) {
+  res.render("register");
+});
+
+app.get("/client/dashboard", function(req, res) {
   res.render("client");
+});
+
+app.get("/client/dashboard.html", function(req, res) {
+  res.render("client");
+});
+
+app.get("/client/products.html", function(req, res) {
+  res.render("products");
+});
+
+app.get("/client/products", function(req, res) {
+  res.render("products");
+});
+
+app.get("/client/categories.html", function(req, res) {
+  res.render("categories");
+});
+
+app.get("/client/categories", function(req, res) {
+  res.render("categories");
+});
+
+app.get("/client/sellers.html", function(req, res) {
+  res.render("sellers");
+});
+
+app.get("/client/sellers", function(req, res) {
+  res.render("sellers");
+});
+
+app.get("/client/brands.html", function(req, res) {
+  res.render("brands");
+});
+
+app.get("/client/brands", function(req, res) {
+  res.render("brands");
+});
+
+app.get("/client/keywords.html", function(req, res) {
+  res.render("keywords");
+});
+
+app.get("/client/keywords", function(req, res) {
+  res.render("keywords");
+});
+
+app.get("/client/analytic.html", function(req, res) {
+  res.render("analytic");
+});
+
+app.get("/client/analytic", function(req, res) {
+  res.render("analytic");
+});
+
+app.get("/client/market.html", function(req, res) {
+  res.render("market");
+});
+
+app.get("/client/market", function(req, res) {
+  res.render("market");
+});
+
+app.get("/client/store/main.html", function(req, res) {
+  res.render("main");
+});
+
+app.get("/client/store/main", function(req, res) {
+  res.render("main");
+});
+
+app.get("/client/lists.html", function(req, res) {
+  res.render("lists");
+});
+
+app.get("/client/lists", function(req, res) {
+  res.render("lists");
+});
+
+app.get("/client/rates.html", function(req, res) {
+  res.render("rates");
+});
+
+app.get("/client/rates", function(req, res) {
+  res.render("rates");
+});
+
+app.get("/client/partner.html", function(req, res) {
+  res.render("partner");
+});
+
+app.get("/client/partner", function(req, res) {
+  res.render("partner");
+});
+
+app.get("/client/user.html", function(req, res) {
+  res.render("user");
+});
+
+app.get("/client/user", function(req, res) {
+  res.render("user");
+});
+
+app.get("/client/faq.html", function(req, res) {
+  res.render("faq");
+});
+
+app.get("/client/faq", function(req, res) {
+  res.render("faq");
 });
