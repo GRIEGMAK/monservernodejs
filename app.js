@@ -123,3 +123,7 @@ app.get("/politika-konfidencialnosti/", function(req, res) {
 app.get("/register.html", function(req, res) {
     res.render("register");
 });
+
+app.get("/client/", function(req, res) {
+  res.render("client");
+});
