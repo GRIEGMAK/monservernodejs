@@ -29,6 +29,12 @@ $(function() {
                     localStorage.setItem('user_id', data.user_id);
                     localStorage.setItem('role', data.role);
 
+                    console.log(localStorage.getItem('token'))
+                    console.log(localStorage.getItem('expires_in'))
+                    console.log(localStorage.getItem('refresh_token'))
+                    console.log(localStorage.getItem('user_id'))
+                    console.log(localStorage.getItem('role'))
+
                     try {
 
                         settings.sendTrackData(true, 'login');
