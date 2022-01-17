@@ -1,7 +1,7 @@
 var RouterController = {
     defaultPage: 'dashboard',
     container: $('#page-content'),
-    templatesPath: '/client/templates/',
+    templatesPath: '/views/',
     init: function() {
 
         this.handleCurrentState();
