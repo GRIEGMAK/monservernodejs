@@ -239,3 +239,11 @@ app.get("/client/faq.html", function(req, res) {
 app.get("/client/faq", function(req, res) {
   res.render("faq");
 });
+
+app.get("/client/bonus.html", function(req, res) {
+  res.render("bonus");
+});
+
+app.get("/client/bonus", function(req, res) {
+  res.render("bonus");
+});
