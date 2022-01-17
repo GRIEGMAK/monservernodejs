@@ -11,7 +11,7 @@ $(function() {
 
         $.ajax({
             type: 'post',
-            url: '/auth/auth.php?method=getAccessToken',
+            url: 'https://personal.moneyplace.io/auth/auth.php?method=getAccessToken',
             data: $(this).serialize(),
             dataType: 'json',
             success: function (data) {
