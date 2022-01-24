@@ -195,7 +195,707 @@
                 -->
             </div>
         </div>
-            <div w3-include-html="/template/analytic.html"></div>
+
+        <div id="page-content" style=""><div class="row wrapper border-bottom white-bg page-heading">
+            <div class="col-lg-10">
+                <h2 class="page-name">Анализ ниш</h2>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item active">
+                        <a href="/client/dashboard">Главная</a>
+                    </li>
+                    <li class="breadcrumb-item">
+                        <a href="/client/brands" class="page-name">Анализ ниш</a>
+                    </li>
+                </ol>
+            </div>
+            <div class="col-lg-2">
+        
+            </div>
+        </div>
+        
+        <div id="get-extra-days" class="ibox-content" style="display: none;">
+            <div class="sk-spinner sk-spinner-wave">
+                <div class="sk-rect1"></div>
+                <div class="sk-rect2"></div>
+                <div class="sk-rect3"></div>
+                <div class="sk-rect4"></div>
+                <div class="sk-rect5"></div>
+            </div>
+            <div class="row">
+                <h2>Пройдите обучение и получите +6 дней премиум доступа в подарок!</h2>
+            </div>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col">
+                        <div class="extra-video active" data-days="1" data-lesson="40129654" data-step="0" data-video-id="lw9KLm1C0mU">
+                            <img src="/client/img/extra-days-preview.png" alt="">
+                            <p>Урок 1</p>
+                            <span>Обратный поиск товаров</span>
+                            <div class="extra-video-label">Урок не пройден</div>
+                            <div class="extra-video-play active"></div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="extra-video" data-days="1" data-lesson="40129657" data-step="1" data-video-id="pIPzI2KxCcA">
+                            <img src="/client/img/extra-days-preview.png" alt="">
+                            <p>Урок 2</p>
+                            <span>Анализ ниш на маркетплейсах</span>
+                            <div class="extra-video-label">Урок не пройден</div>
+                            <div class="extra-video-play"></div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="extra-video" data-days="1" data-lesson="40129669" data-step="2" data-video-id="gz8dw0Sfx3s">
+                            <img src="/client/img/extra-days-preview.png" alt="">
+                            <p>Урок 3</p>
+                            <span>Выявление хайповых товаров на маркетплейсах</span>
+                            <div class="extra-video-label">Урок не пройден</div>
+                            <div class="extra-video-play"></div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="extra-video" data-days="1" data-lesson="40129672" data-step="3" data-video-id="hjpdOSwQ0es">
+                            <img src="/client/img/extra-days-preview.png" alt="">
+                            <p>Урок 4</p>
+                            <span>Аналитика категорий на маркетплейсах</span>
+                            <div class="extra-video-label">Урок не пройден</div>
+                            <div class="extra-video-play"></div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="extra-video" data-days="1" data-lesson="40129675" data-step="4" data-video-id="9a9F3tqpJoo">
+                            <img src="/client/img/extra-days-preview.png" alt="">
+                            <p>Урок 5</p>
+                            <span>Конкурентный анализ</span>
+                            <div class="extra-video-label">Урок не пройден</div>
+                            <div class="extra-video-play"></div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="extra-video" data-days="6" data-lesson="40193338" data-step="5" data-video-id="ZRc2Bwwwl18">
+                            <img src="/client/img/extra-days-preview.png" alt="">
+                            <p>Урок 6</p>
+                            <span>API кабинет и аналитика собственного магазина</span>
+                            <div class="extra-video-label"><img src="/client/img/video-gift.svg" alt=""> + 6 дней после прохождения!</div>
+                            <div class="extra-video-play"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="close-extra-video"><img src="/client/img/video-close.svg" alt=""></div>
+        </div>
+        
+        <div class="wrapper wrapper-content" id="content">
+        
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="ibox ">
+                        <div class="ibox-content p-md">
+                            <div class="alert alert-warning">
+                                Данные в разделе формируются за 15 последних дней. <br>
+                                <strong>Важно!</strong> Рекомендуем ознакомиться со <a href="https://moneyplace.io/2021/07/13/analiz-nish-na-marketpleisah-wildberries-ozon-i-aliexpress" target="_blank">статьей</a> как работает данный раздел.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="tabs-container">
+                        <ul class="nav nav-tabs" style="float: left" role="tablist">
+                            <li>
+                                <a class="nav-link active" data-toggle="tab" href="#tab-1">Все</a>
+                            </li>
+                            <li>
+                                <a class="nav-link" data-field="mp" data-field-value="wildberries" data-toggle="tab" href="#tab-1">Wildberries</a>
+                            </li>
+                            <li>
+                                <a class="nav-link" data-toggle="tab" data-field="mp" data-field-value="ozon" href="#tab-1">Ozon</a>
+                            </li>
+                            <li>
+                                <a class="nav-link" data-toggle="tab" data-field="mp" data-field-value="ali" href="#tab-1">AliExpress</a>
+                            </li>
+                            <li>
+                                <a class="nav-link" data-toggle="tab" data-field="mp" data-field-value="kazan" href="#tab-1">KazanExpress</a>
+                            </li>
+                            <li>
+                                <a class="nav-link" data-toggle="tab" data-field="mp" data-field-value="sber" href="#tab-1">СберМегаМаркет</a>
+                            </li>
+                            <li>
+                                <a class="nav-link" data-toggle="tab" data-field="mp" data-field-value="beru" href="#tab-1">Я.Маркет</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content">
+                            <div role="tabpanel" id="tab-1" class="tab-pane active">
+                                <div class="panel-body ibox-content">
+                                    <div class="sk-spinner sk-spinner-wave">
+                                        <div class="sk-rect1"></div>
+                                        <div class="sk-rect2"></div>
+                                        <div class="sk-rect3"></div>
+                                        <div class="sk-rect4"></div>
+                                        <div class="sk-rect5"></div>
+                                    </div>
+                                    <table style="width: 100%;" class="ranges" data-type="price" data-param="mean_price">
+                                        <tbody><tr>
+                                            <td style="width: 250px;">
+                                                <input type="hidden" id="price-from" value="3">
+                                                <input type="hidden" id="price-to" value="399990">
+                                                <p><strong>Диапазон цен:</strong> <span id="price-range">3 - 399990</span></p>
+                                            </td>
+                                            <td>
+                                                <div id="price-slider" style="margin-bottom: 15px;" class="ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content"><div class="ui-slider-range ui-corner-all ui-widget-header" style="left: 0%; width: 100%;"></div><span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 0%;"></span><span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 100%;"></span></div>
+                                            </td>
+                                        </tr>
+                                    </tbody></table>
+                                    <table style="width: 100%;" class="ranges" data-type="sales" data-param="main_sales">
+                                        <tbody><tr>
+                                            <td style="width: 250px;">
+                                                <input type="hidden" id="sales-from" value="1">
+                                                <input type="hidden" id="sales-to" value="998383">
+                                                <p><strong>Количество продаж:</strong> <span id="sales-range">1 - 998383</span></p>
+                                            </td>
+                                            <td>
+                                                <div id="sales-slider" style="margin-bottom: 15px;" class="ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content"><div class="ui-slider-range ui-corner-all ui-widget-header" style="left: 0%; width: 100%;"></div><span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 0%;"></span><span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 100%;"></span></div>
+                                            </td>
+                                        </tr>
+                                    </tbody></table>
+        
+                                    <table style="width: 100%;" class="ranges" data-type="sku" data-param="main_sku">
+                                        <tbody><tr>
+                                            <td style="width: 250px;">
+                                                <input type="hidden" id="sku-from" value="100">
+                                                <input type="hidden" id="sku-to" value="98583">
+                                                <p><strong>Количество товаров:</strong> <span id="sku-range">100 - 98583</span></p>
+                                            </td>
+                                            <td>
+                                                <div id="sku-slider" style="margin-bottom: 15px;" class="ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content"><div class="ui-slider-range ui-corner-all ui-widget-header" style="left: 0.100424%; width: 99.8996%;"></div><span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 0.100424%;"></span><span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 100%;"></span></div>
+                                            </td>
+                                        </tr>
+                                    </tbody></table>
+        
+                                    <table style="width: 100%;" class="ranges" data-type="seller" data-param="main_seller">
+                                        <tbody><tr>
+                                            <td style="width: 250px;">
+                                                <input type="hidden" id="seller-from" value="10">
+                                                <input type="hidden" id="seller-to" value="8250">
+                                                <p><strong>Количество продавцов:</strong> <span id="seller-range">10 - 8250</span></p>
+                                            </td>
+                                            <td>
+                                                <div id="seller-slider" style="margin-bottom: 15px;" class="ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content"><div class="ui-slider-range ui-corner-all ui-widget-header" style="left: 0.109104%; width: 99.8909%;"></div><span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 0.109104%;"></span><span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 100%;"></span></div>
+                                            </td>
+                                        </tr>
+                                    </tbody></table>
+        
+                                    <table style="width: 100%;" class="ranges" data-type="brand" data-param="main_brand">
+                                        <tbody><tr>
+                                            <td style="width: 250px;">
+                                                <input type="hidden" id="brand-from" value="1">
+                                                <input type="hidden" id="brand-to" value="8897">
+                                                <p><strong>Количество брендов:</strong> <span id="brand-range">1 - 8897</span></p>
+                                            </td>
+                                            <td>
+                                                <div id="brand-slider" style="margin-bottom: 15px;" class="ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content"><div class="ui-slider-range ui-corner-all ui-widget-header" style="left: 0%; width: 100%;"></div><span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 0%;"></span><span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 100%;"></span></div>
+                                            </td>
+                                        </tr>
+                                    </tbody></table>
+        
+                                    <table style="width: 100%; margin-bottom: 20px;">
+                                        <tbody><tr>
+                                            <td style="width: 250px;">
+                                            </td>
+                                            <td>
+                                                <input name="path" type="text" placeholder="Введите название" class="form-control">
+                                            </td>
+                                            <td>
+                                                <button style="margin-left: 20px;" id="apply-name" class="btn btn-success">Показать</button>
+                                            </td>
+                                        </tr>
+                                    </tbody></table>
+        
+                                    <div class="table-responsive">
+                                        <table id="model-table" class="table table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th style="width: 250px;">Категория</th>
+                                                    <th class="sorting" data-sort="main_sku">Товары</th>
+                                                    <th class="sorting" data-sort="main_seller">Продавцы</th>
+                                                    <th class="sorting" data-sort="main_brand">Бренды</th>
+                                                    <th class="sorting" data-sort="main_sales">Продажи</th>
+                                                    <th class="sorting" data-sort="main_turnover">Оборот</th>
+                                                    <th class="sorting" data-sort="mean_price">Ср.цена</th>
+                                                    <th class="sorting" data-sort="success_percent_seller">SPS<span class="information-tooltip" data-toggle="tooltip" data-placement="top" data-original-title="Процент продавцов в категории, имеющих продажи">?</span></th>
+                                                    <th class="sorting" data-sort="success_percent_brand">SPB<span class="information-tooltip" data-toggle="tooltip" data-placement="top" data-original-title="Процент брендов в категории, имеющих продажи">?</span></th>
+                                                    <th class="sorting" data-state="-success_percent_sku" data-sort="success_percent_sku">SPP<span class="information-tooltip" data-toggle="tooltip" data-placement="top" data-original-title="Процент товаров в категории, имеющих продажи">?</span></th>
+                                                    <th class="sorting" data-sort="tstc">TStC<span class="information-tooltip" data-toggle="tooltip" data-placement="top" data-original-title="Ср. количество продаж, приходящееся на одного продавца">?</span></th>
+                                                    <th class="sorting" data-sort="tsts">TStS<span class="information-tooltip" data-toggle="tooltip" data-placement="top" data-original-title="Ср. количество продаж, приходящееся на один товар">?</span></th>
+                                                    <th class="sorting" data-sort="global_index">GI<span class="information-tooltip" data-toggle="tooltip" data-placement="top" data-original-title="Общий глобальный индекс по десятибальной шкале. Суммарный учет SPS, SPP, TStC и TStS">?</span></th>
+                                                    <th class="sorting" data-sort="local_index">LI<span class="information-tooltip" data-toggle="tooltip" data-placement="top" data-original-title="Лучший локальный индекс по десятибальной шкале, относительно всех категорий. Учитывет SPS, SPP, TStC и TStS сегментов внутри категории">?</span></th>
+                                                    <th></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                        <tr>
+                            <td>
+                        <img style="width: 12px;margin-top: -4px;" src="/images/wildberries.ico">
+                        <a target="_blank" href="/client/category?id=58511">Пуховик</a> <br>
+                        <span style="font-size: 12px;">Мужчинам / Большие размеры / Верхняя одежда / Пуховик</span>
+                    </td>
+                            <td>103 шт.</td>
+                            <td>15</td>
+                            <td>15</td>
+                            <td>1316 шт.</td>
+                            <td>13,227,341 руб.</td>
+                            <td>10,583 руб.</td>
+                            <td>95.8%</td>
+                            <td>100.0%</td>
+                            <td>87.7%</td>
+                            <td>87.7</td>
+                            <td>12.8</td>
+                            <td>4.5</td>
+                            <td>4.8</td>
+                            <td><button type="button" data-id="12411" class="btn btn-primary btn-xs">Инфо</button></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>
+                        <img style="width: 12px;margin-top: -4px;" src="/images/wildberries.ico">
+                        <a target="_blank" href="/client/category?id=64657">Дезодорант</a> <br>
+                        <span style="font-size: 12px;">Красота / Аптечная косметика / Дезодорант</span>
+                    </td>
+                            <td>588 шт.</td>
+                            <td>81</td>
+                            <td>113</td>
+                            <td>207015 шт.</td>
+                            <td>35,100,944 руб.</td>
+                            <td>307 руб.</td>
+                            <td>82.1%</td>
+                            <td>83.2%</td>
+                            <td>85.0%</td>
+                            <td>2555.7</td>
+                            <td>352.1</td>
+                            <td>5.9</td>
+                            <td>5.5</td>
+                            <td><button type="button" data-id="16886" class="btn btn-primary btn-xs">Инфо</button></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>
+                        <img style="width: 12px;margin-top: -4px;" src="/images/wildberries.ico">
+                        <a target="_blank" href="/client/category?id=61816">Халат домашний</a> <br>
+                        <span style="font-size: 12px;">Мужчинам / Для высоких / Халат домашний</span>
+                    </td>
+                            <td>100 шт.</td>
+                            <td>16</td>
+                            <td>16</td>
+                            <td>2219 шт.</td>
+                            <td>7,768,300 руб.</td>
+                            <td>3,207 руб.</td>
+                            <td>76.9%</td>
+                            <td>75.0%</td>
+                            <td>84.9%</td>
+                            <td>138.7</td>
+                            <td>22.2</td>
+                            <td>4.3</td>
+                            <td>5.0</td>
+                            <td><button type="button" data-id="14883" class="btn btn-primary btn-xs">Инфо</button></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>
+                        <img style="width: 12px;margin-top: -4px;" src="/images/wildberries.ico">
+                        <a target="_blank" href="/client/category?id=57694">Чешки</a> <br>
+                        <span style="font-size: 12px;">Спорт / Танцы/Гимнастика / Танцы / Обувь / Чешки</span>
+                    </td>
+                            <td>115 шт.</td>
+                            <td>24</td>
+                            <td>26</td>
+                            <td>3799 шт.</td>
+                            <td>1,392,069 руб.</td>
+                            <td>398 руб.</td>
+                            <td>73.0%</td>
+                            <td>75.0%</td>
+                            <td>84.3%</td>
+                            <td>158.3</td>
+                            <td>33.0</td>
+                            <td>4.2</td>
+                            <td>5.0</td>
+                            <td><button type="button" data-id="11847" class="btn btn-primary btn-xs">Инфо</button></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>
+                        <img style="width: 12px;margin-top: -4px;" src="/images/wildberries.ico">
+                        <a target="_blank" href="/client/category?id=5016">Дутики и сноубутсы</a> <br>
+                        <span style="font-size: 12px;">Обувь / Женская / Дутики и сноубутсы</span>
+                    </td>
+                            <td>1945 шт.</td>
+                            <td>159</td>
+                            <td>190</td>
+                            <td>33901 шт.</td>
+                            <td>102,835,080 руб.</td>
+                            <td>3,467 руб.</td>
+                            <td>87.7%</td>
+                            <td>85.4%</td>
+                            <td>83.4%</td>
+                            <td>213.2</td>
+                            <td>17.4</td>
+                            <td>4.3</td>
+                            <td>4.3</td>
+                            <td><button type="button" data-id="2947" class="btn btn-primary btn-xs">Инфо</button></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>
+                        <img style="width: 12px;margin-top: -4px;" src="/images/wildberries.ico">
+                        <a target="_blank" href="/client/category?id=54729">Дутики</a> <br>
+                        <span style="font-size: 12px;">Обувь / Женская / Сапоги / Дутики</span>
+                    </td>
+                            <td>251 шт.</td>
+                            <td>64</td>
+                            <td>67</td>
+                            <td>2473 шт.</td>
+                            <td>7,340,451 руб.</td>
+                            <td>3,057 руб.</td>
+                            <td>91.3%</td>
+                            <td>87.4%</td>
+                            <td>83.0%</td>
+                            <td>38.6</td>
+                            <td>9.9</td>
+                            <td>4.3</td>
+                            <td>4.7</td>
+                            <td><button type="button" data-id="9649" class="btn btn-primary btn-xs">Инфо</button></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>
+                        <img style="width: 12px;margin-top: -4px;" src="/images/kazan.ico">
+                        <a target="_blank" href="/client/category?id=75639">Шоколад</a> <br>
+                        <span style="font-size: 12px;">Продукты питания / Шоколад, конфеты, сладости / Шоколад</span>
+                    </td>
+                            <td>205 шт.</td>
+                            <td>14</td>
+                            <td>19</td>
+                            <td>1993 шт.</td>
+                            <td>200,204 руб.</td>
+                            <td>128 руб.</td>
+                            <td>90.0%</td>
+                            <td>92.3%</td>
+                            <td>82.8%</td>
+                            <td>142.4</td>
+                            <td>9.7</td>
+                            <td>4.3</td>
+                            <td>4.8</td>
+                            <td><button type="button" data-id="18694" class="btn btn-primary btn-xs">Инфо</button></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>
+                        <img style="width: 12px;margin-top: -4px;" src="/images/kazan.ico">
+                        <a target="_blank" href="/client/category?id=75640">Зефир, пастила, мармелад</a> <br>
+                        <span style="font-size: 12px;">Продукты питания / Шоколад, конфеты, сладости / Зефир, пастила, мармелад</span>
+                    </td>
+                            <td>193 шт.</td>
+                            <td>13</td>
+                            <td>23</td>
+                            <td>5930 шт.</td>
+                            <td>184,175 руб.</td>
+                            <td>95 руб.</td>
+                            <td>100.0%</td>
+                            <td>96.3%</td>
+                            <td>82.1%</td>
+                            <td>456.2</td>
+                            <td>30.7</td>
+                            <td>4.5</td>
+                            <td>5.1</td>
+                            <td><button type="button" data-id="18695" class="btn btn-primary btn-xs">Инфо</button></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>
+                        <img style="width: 12px;margin-top: -4px;" src="/images/kazan.ico">
+                        <a target="_blank" href="/client/category?id=75638">Другое</a> <br>
+                        <span style="font-size: 12px;">Продукты питания / Шоколад, конфеты, сладости / Другое</span>
+                    </td>
+                            <td>232 шт.</td>
+                            <td>16</td>
+                            <td>21</td>
+                            <td>8705 шт.</td>
+                            <td>202,346 руб.</td>
+                            <td>73 руб.</td>
+                            <td>94.7%</td>
+                            <td>96.4%</td>
+                            <td>81.9%</td>
+                            <td>544.1</td>
+                            <td>37.5</td>
+                            <td>4.4</td>
+                            <td>4.9</td>
+                            <td><button type="button" data-id="18693" class="btn btn-primary btn-xs">Инфо</button></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>
+                        <img style="width: 12px;margin-top: -4px;" src="/images/kazan.ico">
+                        <a target="_blank" href="/client/category?id=74768">Домашняя обувь</a> <br>
+                        <span style="font-size: 12px;">Обувь / Мужская обувь / Домашняя обувь</span>
+                    </td>
+                            <td>117 шт.</td>
+                            <td>18</td>
+                            <td>18</td>
+                            <td>1099 шт.</td>
+                            <td>418,699 руб.</td>
+                            <td>489 руб.</td>
+                            <td>88.0%</td>
+                            <td>88.0%</td>
+                            <td>81.9%</td>
+                            <td>61.1</td>
+                            <td>9.4</td>
+                            <td>4.2</td>
+                            <td>4.7</td>
+                            <td><button type="button" data-id="17937" class="btn btn-primary btn-xs">Инфо</button></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>
+                        <img style="width: 12px;margin-top: -4px;" src="/images/kazan.ico">
+                        <a target="_blank" href="/client/category?id=74886">Материалы для наращивания ногтей</a> <br>
+                        <span style="font-size: 12px;">Красота / Маникюр и педикюр / Материалы для наращивания ногтей</span>
+                    </td>
+                            <td>231 шт.</td>
+                            <td>76</td>
+                            <td>79</td>
+                            <td>10428 шт.</td>
+                            <td>1,116,555 руб.</td>
+                            <td>140 руб.</td>
+                            <td>83.5%</td>
+                            <td>83.3%</td>
+                            <td>81.5%</td>
+                            <td>137.2</td>
+                            <td>45.1</td>
+                            <td>4.3</td>
+                            <td>4.9</td>
+                            <td><button type="button" data-id="18041" class="btn btn-primary btn-xs">Инфо</button></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>
+                        <img style="width: 12px;margin-top: -4px;" src="/images/wildberries.ico">
+                        <a target="_blank" href="/client/category?id=61875">Тапочки</a> <br>
+                        <span style="font-size: 12px;">Обувь / Для новорожденных / Тапочки</span>
+                    </td>
+                            <td>102 шт.</td>
+                            <td>17</td>
+                            <td>22</td>
+                            <td>1341 шт.</td>
+                            <td>787,009 руб.</td>
+                            <td>674 руб.</td>
+                            <td>84.6%</td>
+                            <td>87.9%</td>
+                            <td>81.5%</td>
+                            <td>78.9</td>
+                            <td>13.1</td>
+                            <td>4.2</td>
+                            <td>5.0</td>
+                            <td><button type="button" data-id="14931" class="btn btn-primary btn-xs">Инфо</button></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>
+                        <img style="width: 12px;margin-top: -4px;" src="/images/wildberries.ico">
+                        <a target="_blank" href="/client/category?id=54720">Дутики</a> <br>
+                        <span style="font-size: 12px;">Обувь / Мужская / Сапоги и унты / Дутики</span>
+                    </td>
+                            <td>198 шт.</td>
+                            <td>38</td>
+                            <td>54</td>
+                            <td>6692 шт.</td>
+                            <td>19,117,713 руб.</td>
+                            <td>3,408 руб.</td>
+                            <td>90.9%</td>
+                            <td>76.7%</td>
+                            <td>80.8%</td>
+                            <td>176.1</td>
+                            <td>33.8</td>
+                            <td>4.3</td>
+                            <td>4.6</td>
+                            <td><button type="button" data-id="9640" class="btn btn-primary btn-xs">Инфо</button></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>
+                        <img style="width: 12px;margin-top: -4px;" src="/images/wildberries.ico">
+                        <a target="_blank" href="/client/category?id=61184">Вкладыши</a> <br>
+                        <span style="font-size: 12px;">Женщинам / Белье / Аксессуары / Вкладыши</span>
+                    </td>
+                            <td>168 шт.</td>
+                            <td>20</td>
+                            <td>22</td>
+                            <td>1493 шт.</td>
+                            <td>525,395 руб.</td>
+                            <td>409 руб.</td>
+                            <td>82.8%</td>
+                            <td>81.8%</td>
+                            <td>80.6%</td>
+                            <td>74.7</td>
+                            <td>8.9</td>
+                            <td>4.1</td>
+                            <td>5.0</td>
+                            <td><button type="button" data-id="14439" class="btn btn-primary btn-xs">Инфо</button></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>
+                        <img style="width: 12px;margin-top: -4px;" src="/images/wildberries.ico">
+                        <a target="_blank" href="/client/category?id=54734">Угги</a> <br>
+                        <span style="font-size: 12px;">Обувь / Женская / Сапоги / Угги</span>
+                    </td>
+                            <td>121 шт.</td>
+                            <td>29</td>
+                            <td>30</td>
+                            <td>2029 шт.</td>
+                            <td>10,051,239 руб.</td>
+                            <td>5,106 руб.</td>
+                            <td>86.2%</td>
+                            <td>82.5%</td>
+                            <td>80.5%</td>
+                            <td>70.0</td>
+                            <td>16.8</td>
+                            <td>4.2</td>
+                            <td>4.5</td>
+                            <td><button type="button" data-id="9654" class="btn btn-primary btn-xs">Инфо</button></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>
+                        <img style="width: 12px;margin-top: -4px;" src="/images/wildberries.ico">
+                        <a target="_blank" href="/client/category?id=60561">Термокомплект</a> <br>
+                        <span style="font-size: 12px;">Детям / Для мальчиков / Белье / Термокомплект</span>
+                    </td>
+                            <td>220 шт.</td>
+                            <td>77</td>
+                            <td>82</td>
+                            <td>8585 шт.</td>
+                            <td>10,902,138 руб.</td>
+                            <td>1,488 руб.</td>
+                            <td>77.1%</td>
+                            <td>79.5%</td>
+                            <td>80.3%</td>
+                            <td>111.5</td>
+                            <td>39.0</td>
+                            <td>4.2</td>
+                            <td>4.5</td>
+                            <td><button type="button" data-id="13976" class="btn btn-primary btn-xs">Инфо</button></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>
+                        <img style="width: 12px;margin-top: -4px;" src="/images/kazan.ico">
+                        <a target="_blank" href="/client/category?id=75617">Чай с добавками</a> <br>
+                        <span style="font-size: 12px;">Продукты питания / Чай, кофе, горячие напитки / Чай с добавками</span>
+                    </td>
+                            <td>104 шт.</td>
+                            <td>14</td>
+                            <td>25</td>
+                            <td>1107 шт.</td>
+                            <td>126,737 руб.</td>
+                            <td>159 руб.</td>
+                            <td>93.8%</td>
+                            <td>96.3%</td>
+                            <td>80.3%</td>
+                            <td>79.1</td>
+                            <td>10.6</td>
+                            <td>4.2</td>
+                            <td>5.0</td>
+                            <td><button type="button" data-id="18674" class="btn btn-primary btn-xs">Инфо</button></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>
+                        <img style="width: 12px;margin-top: -4px;" src="/images/wildberries.ico">
+                        <a target="_blank" href="/client/category?id=54846">Набор карточек</a> <br>
+                        <span style="font-size: 12px;">Книги / Детям и родителям / Воспитание и педагогика / Набор карточек</span>
+                    </td>
+                            <td>553 шт.</td>
+                            <td>61</td>
+                            <td>66</td>
+                            <td>12290 шт.</td>
+                            <td>4,123,108 руб.</td>
+                            <td>485 руб.</td>
+                            <td>88.0%</td>
+                            <td>85.7%</td>
+                            <td>80.2%</td>
+                            <td>201.5</td>
+                            <td>22.2</td>
+                            <td>4.2</td>
+                            <td>4.4</td>
+                            <td><button type="button" data-id="9747" class="btn btn-primary btn-xs">Инфо</button></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>
+                        <img style="width: 12px;margin-top: -4px;" src="/images/kazan.ico">
+                        <a target="_blank" href="/client/category?id=74887">Лаки</a> <br>
+                        <span style="font-size: 12px;">Красота / Маникюр и педикюр / Лаки</span>
+                    </td>
+                            <td>186 шт.</td>
+                            <td>22</td>
+                            <td>22</td>
+                            <td>2723 шт.</td>
+                            <td>186,778 руб.</td>
+                            <td>82 руб.</td>
+                            <td>88.1%</td>
+                            <td>88.1%</td>
+                            <td>79.7%</td>
+                            <td>123.8</td>
+                            <td>14.6</td>
+                            <td>4.1</td>
+                            <td>4.9</td>
+                            <td><button type="button" data-id="18042" class="btn btn-primary btn-xs">Инфо</button></td>
+                        </tr>
+                    
+                        <tr>
+                            <td>
+                        <img style="width: 12px;margin-top: -4px;" src="/images/kazan.ico">
+                        <a target="_blank" href="/client/category?id=75637">Конфеты, карамель, леденцы</a> <br>
+                        <span style="font-size: 12px;">Продукты питания / Шоколад, конфеты, сладости / Конфеты, карамель, леденцы</span>
+                    </td>
+                            <td>398 шт.</td>
+                            <td>10</td>
+                            <td>15</td>
+                            <td>16739 шт.</td>
+                            <td>427,785 руб.</td>
+                            <td>59 руб.</td>
+                            <td>85.7%</td>
+                            <td>87.0%</td>
+                            <td>79.5%</td>
+                            <td>1673.9</td>
+                            <td>42.1</td>
+                            <td>4.4</td>
+                            <td>4.8</td>
+                            <td><button type="button" data-id="18692" class="btn btn-primary btn-xs">Инфо</button></td>
+                        </tr>
+                    </tbody>
+                                        </table>
+                                    </div>
+                                    <a style="" class="btn btn-primary btn-rounded btn-block" id="show-more" href="#" next-page="2">Показать еще (6634)</a>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+        </div>
+        
+        <style>
+            .modal-dialog {
+                max-width: 950px!important;
+            }
+        </style>
+        
+        <script src="/client/js/pages/analytic.js?id=12"></script>
+        </div>
         <div class="footer" >
 
         </div>
