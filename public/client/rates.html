@@ -195,7 +195,10 @@
                 -->
             </div>
         </div>
-            <div w3-include-html="/template/rates.html"></div>
+        <div id="page-content" style=""></div>
+        <script>
+            includeHTML('/template/rates.html', document.getElementById('page-content'));
+        </script>
 
         <div class="footer" >
 
