@@ -1,0 +1,94 @@
+<div id="page-content" style=""><div class="row wrapper border-bottom white-bg top-navigation" style="margin-bottom: 20px;">
+    <nav class="navbar navbar-expand-lg">
+        <ul class="nav navbar-nav mr-auto">
+            <li><a href="/client/store/main">Главная</a></li>
+            <li><a href="/client/store/abc" disabled="">ABC Анализ</a></li>
+            <li><a href="/client/store/xyz">XYZ Анализ</a></li>
+            <li><a href="/client/store/amp">УМП расчет</a></li>
+            <li><a href="/client/store/orders">Заказы</a></li>
+            <li><a href="/client/store/supplies">Поставки</a></li>
+            <li><a href="/client/store/products">Товары</a></li>
+            <li><a href="/client/store/finances">Финансы</a></li>
+            <li class="active"><a href="/client/store/stores">Магазины</a></li>
+        </ul>
+    </nav>
+</div>
+
+<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="row">
+        <div class="col-lg-12">
+            <h2>Мои магазины <button type="button" id="add-store" class="btn btn-primary btn-xs">Добавить</button></h2>
+        </div>
+    </div>
+</div>
+
+<div class="wrapper wrapper-content" id="content">
+            <div class="alert alert-danger">
+                Попробуйте нашу новую версию <a href="https://kp.moneyplace.io/shops/all?access_token=8a6987cf27c829327966158adca3e2a6193b4188&amp;refresh_token=21b0ddbf18a4503b36c81864d884c0cb38f039e7&amp;user_id=118333" target="_blank">кабинета продавца</a>
+            </div>
+        
+
+    <div class="alert alert-info" style="font-size: 12px;margin-top: -5px;">
+        Ознакомьтесь с обучающим видео по разделу <a href="https://youtu.be/s4ViiF-3nkQ" target="_blank">"Финансы и магазины"</a>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="tabs-container">
+                <div class="tab-content">
+                    <div role="tabpanel" id="tab-1" class="tab-pane active">
+
+                        <div class="panel-body ibox-content">
+                            <div class="sk-spinner sk-spinner-wave">
+                                <div class="sk-rect1"></div>
+                                <div class="sk-rect2"></div>
+                                <div class="sk-rect3"></div>
+                                <div class="sk-rect4"></div>
+                                <div class="sk-rect5"></div>
+                            </div>
+                            <div class="table-responsive">
+
+                                <h3>Как получить API - Ключ:</h3>
+
+
+                                <p>Для аналитики ваших продаж на WildBerries необходимо подключить кабинет поставщика по API - ключу.
+                                    На портале поставщика перейдите в раздел «Настройки»</p>
+
+                                <ol>
+                                    <li>Нажиме <a href="https://suppliers-portal.wildberries.ru/supplier-settings/access-to-api" target="_blank">«Доступ к API»</a> (https://suppliers-portal.wildberries.ru/supplier-settings/access-to-api)</li>
+                                    <li>Сгенерируйте API-ключ</li>
+                                    <li>Скопируйте API-ключ в формате Base64</li>
+                                    <li>Введите ваш ключ в сервисе в разделе «Кабинет продавца»  → «Магазины» и нажмите «Сохранить».</li>
+                                </ol>
+
+                                <table id="model-table" class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>Название</th>
+                                            <th>МП</th>
+                                            <th>Статус</th>
+                                            <th>Ключ</th>
+                                            <th>Остатки <span class="information-tooltip" data-toggle="tooltip" data-placement="top" data-original-title="Дата обновления остатков">?</span></th>
+                                            <th>Заказы <span class="information-tooltip" data-toggle="tooltip" data-placement="top" data-original-title="Дата обновления заказов и продаж">?</span></th>
+                                            <th>Финансы <span class="information-tooltip" data-toggle="tooltip" data-placement="top" data-original-title="Дата обновления финансов">?</span></th>
+                                            <th>Создание <span class="information-tooltip" data-toggle="tooltip" data-placement="top" data-original-title="Дата добавления магазина">?</span></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                <tr>
+                    <td colspan="8">Магазинов пока нет!</td>
+                </tr>
+            </tbody>
+                                </table>
+                                <div style="margin: 0 auto;width: 440px;" id="pagination"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="/client/js/store/global.js?id=4"></script>
+<script src="/client/js/store/stores.js?id=6"></script></div>

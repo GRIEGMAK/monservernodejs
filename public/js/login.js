@@ -44,7 +44,7 @@ $(function() {
                     setTimeout(function() {
 
                         location.replace('/client/bonus');
-                    }, 10000);
+                    },800);
                 }
                 else {
 

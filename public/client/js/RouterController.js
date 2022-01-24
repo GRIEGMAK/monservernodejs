@@ -1,13 +1,14 @@
 var RouterController = {
     defaultPage: 'dashboard',
     container: $('#page-content'),
-    templatesPath: '/client/',
+    templatesPath: '/client/templates/',
     init: function() {
 
         this.handleCurrentState();
 
         History.Adapter.bind(window, 'statechange', function() {
 
+            console.log(templatesPath)
             var state = History.getState();
 
             $('#page-preloader').show();
@@ -25,7 +26,6 @@ var RouterController = {
         });
     },
     getCurrentPath: function() {
-
         return document.location.pathname == "/client/" ? this.defaultPage : document.location.pathname.split('/').slice(2).join('/');
     },
     setState: function(template, title, url) {
@@ -53,8 +53,9 @@ var RouterController = {
         if (status) {
 
             this.container.show();
+            console.log(this.container)
 
-            PermissionController.applyPermissions();
+            // PermissionController.applyPermissions();
 
             CommonController.setPeriodOption();
         }

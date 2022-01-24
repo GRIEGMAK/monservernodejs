@@ -33,7 +33,7 @@ var settings = {
     },
     getToken: function(refreshToken) {
         $.ajax({
-            url: '/auth/auth.php?method=refreshAccessToken',
+            url: 'https://personal.moneyplace.io/auth/auth.php"/auth/auth.php?method=refreshAccessToken',
             type: 'post',
             async: false,
             data: {

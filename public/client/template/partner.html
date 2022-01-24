@@ -1,0 +1,197 @@
+
+<div id="page-content" style=""><div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-10">
+        <h2>Привлекайте пользователей и получайте постоянный пассивный доход с их оплат!</h2>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item active">
+                <a href="/client/dashboard">Главная</a>
+            </li>
+            <li class="breadcrumb-item active">
+                <strong>Партнерская программа</strong>
+            </li>
+        </ol>
+    </div>
+    <div class="col-lg-2">
+
+    </div>
+</div>
+
+<div class="wrapper wrapper-content" id="content">
+
+    <div class="row">
+        <div class="col-lg-3">
+            <div class="widget style1 navy-bg">
+                <div class="row">
+                    <div class="col-2">
+                        <i class="fa fa-user fa-5x"></i>
+                    </div>
+                    <div class="col-10 text-right">
+                        <span> Привлечено пользователей </span>
+                        <h2 class="font-bold" id="referrals">0</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3">
+            <div class="widget style1 lazur-bg">
+                <div class="row">
+                    <div class="col-2">
+                        <i class="fa fa-thumbs-up fa-5x"></i>
+                    </div>
+                    <div class="col-10 text-right">
+                        <span> Заработано всего </span>
+                        <h2 class="font-bold" id="profit">0 руб.</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3">
+            <div class="widget style1 yellow-bg">
+                <div class="row">
+                    <div class="col-2">
+                        <i class="fa fa-shield fa-5x"></i>
+                    </div>
+                    <div class="col-10 text-right">
+                        <span> Холд </span>
+                        <h2 class="font-bold" id="user-hold">0 руб.</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3">
+            <div class="widget style1 red-bg">
+                <div class="row">
+                    <div class="col-2">
+                        <i class="fa fa-euro fa-5x"></i>
+                    </div>
+                    <div class="col-10 text-right">
+                        <span> Доступно к выводу </span>
+                        <h2 class="font-bold" id="user-balance">0 руб.</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row" style="margin-top: 18px;">
+        <div class="col-lg-12">
+            <div class="tabs-container">
+                <ul class="nav nav-tabs" style="float: left" role="tablist">
+                    <li>
+                        <a class="nav-link active" data-toggle="tab" href="#tab-1">Общая информация</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" data-toggle="tab" href="#tab-2">Статистика</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" data-toggle="tab" href="#tab-3">Вывод средств</a>
+                    </li>
+                </ul>
+
+                <div class="tab-content">
+
+                    <div role="tabpanel" id="tab-1" class="tab-pane active">
+                        <div class="panel-body ibox-content">
+                            <h3>Условия партнерской программы:</h3>
+                            <ol>
+                                <li>Вы привлекаете заинтересованного пользователя по своей партнерской ссылке</li>
+                                <li>Пользователь оплачивает любой тариф</li>
+                                <li>По партнерской программе вы получаете 15% (600, 2100 или 2985 руб.) с первого и всех последующих платежей вашего пользователя!</li>
+                                <li>Вам доступен вывод средств 2 раза в месяц на Р/С, с условием, что сумма к выводу более 1000 руб.</li>
+                                <li>Длительность холда составляет одну неделю</li>
+                            </ol>
+                            <h3>Ваши партнерские ссылки:</h3>
+                            <div class="alert alert-success">
+                                1) Страница личного кабинета: <strong id="copy-1">https://personal.moneyplace.io/?id_ref=109370</strong> <button data-id="1" style="padding: 2px 6px;margin-left: 10px;" class="btn btn-outline btn-success" type="button"><i class="fa fa-paste"></i> </button> <br>
+                                2) Страница лендинга: <strong id="copy-2">https://moneyplace.io/?id_ref=109370</strong> <button data-id="2" style="padding: 2px 6px;margin-left: 10px;" class="btn btn-outline btn-success" type="button"><i class="fa fa-paste"></i> </button>
+                            </div>
+                            <div class="alert alert-info">
+                                <strong>Важно!</strong> Для профессиональных вебмастеров, а так же медийных людей - мы предоставляем купоны на индивидуальных условиях по запросу.
+                                <br>
+                                При использовании купона на моменте оплаты - человек закрепляется за вами, даже если не переходил по вашей партнерской ссылке!
+                            </div>
+                        </div>
+                    </div>
+
+                    <div role="tabpanel" id="tab-2" class="tab-pane">
+
+                        <div class="panel-body ibox-content">
+
+                            <form class="form-inline" id="filters">
+                                <div class="form-group">
+                                    <input type="text" id="date" name="q[date][between]" class="form-control">
+                                </div>
+                                <div class="form-group" style="margin-left: 20px;">
+                                    <select id="statuses" class="form-control" name="q[status][equal]"><option value="">Статус</option><option value="created">Создана</option><option value="paid">Выплачена</option><option value="hold">В холде</option><option value="cancelled">Отмена</option></select>
+                                </div>
+                                <input type="hidden" name="q[type][equal]" value="comission">
+                                <input type="hidden" name="sort" value="-created_at">
+                                <input type="hidden" name="expand" value="rate">
+                            </form>
+
+                            <div style="height: 300px;">
+                                <canvas style="margin: 0px auto; display: block; width: 0px; height: 0px;" id="chart-transactions" height="0" class="chartjs-render-monitor" width="0"></canvas>
+                            </div>
+
+                            <div class="sk-spinner sk-spinner-wave">
+                                <div class="sk-rect1"></div>
+                                <div class="sk-rect2"></div>
+                                <div class="sk-rect3"></div>
+                                <div class="sk-rect4"></div>
+                                <div class="sk-rect5"></div>
+                            </div>
+                            <div class="table-responsive">
+                                <table id="model-table" class="table table-striped">
+                                    <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Тип</th>
+                                        <th>Статус</th>
+                                        <th>Сумма</th>
+                                        <th>Тариф</th>
+                                        <th>Дата создания</th>
+                                        <th>Дата обновления</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody><tr><td colspan="7">Транзакций пока нет</td></tr></tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div role="tabpanel" id="tab-3" class="tab-pane">
+                        <div class="panel-body ibox-content">
+                            <div class="sk-spinner sk-spinner-wave">
+                                <div class="sk-rect1"></div>
+                                <div class="sk-rect2"></div>
+                                <div class="sk-rect3"></div>
+                                <div class="sk-rect4"></div>
+                                <div class="sk-rect5"></div>
+                            </div>
+                            <div class="table-responsive">
+                                <table id="withdrawal-table" class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>ID</th>
+                                            <th>Статус</th>
+                                            <th>Сумма</th>
+                                            <th>Дата создания</th>
+                                            <th>Дата обновления</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                <tr>
+                   <td colspan="5">Запросов на вывод средств нет</td> 
+                </tr>
+            </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="/client/js/pages/partner.js?id=1"></script></div>
