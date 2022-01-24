@@ -85,7 +85,7 @@ app.get("/index.html", function(req, res) {
 });
 
 app.get("/politika-konfidencialnosti/", function(req, res) {
-  res.render("politika-konfidencialnosti");
+  res.sendfile("politika-konfidencialnosti");
 });
 
 
@@ -98,128 +98,125 @@ app.get("/register", function(req, res) {
 });
 
 app.get("/client/dashboard", function(req, res) {
-  res.sendfile("client.html");
+  res.sendfile("public/client/client.html");
 });
 
 app.get("/client/dashboard.html", function(req, res) {
-  res.sendfile("client.html");
+  res.sendfile("public/client/client.html");
 });
 
 app.get("/client/products.html", function(req, res) {
-  res.sendfile("products.html");
+  res.sendfile("public/client/products.html");
 });
 
 app.get("/client/products", function(req, res) {
-  res.render("products.html");
+  res.sendfile("public/client/products.html");
 });
 
-// app.get("/client/undefined.html", function(req, res) {
-//   res.render("undefined");
-// });
+app.get("/client/undefined.html", function(req, res) {
+  res.sendfile("public/client/undefined.html");
+});
 
-// app.get("/client/undefined", function(req, res) {
-//   res.render("undefined");
-// });
+app.get("/client/undefined", function(req, res) {
+  res.sendfile("public/client/undefined.html");
+});
 
-// app.get("/client/categories.html", function(req, res) {
-//   res.render("categories");
-// });
+app.get("/client/categories.html", function(req, res) {
+  res.sendfile("public/client/categories.html");
+});
 
-// app.get("/client/categories", function(req, res) {
-//   res.render("categories");
-// });
+app.get("/client/categories", function(req, res) {
+  res.sendfile("public/client/categories.html");
+});
 
-// app.get("/client/sellers.html", function(req, res) {
-//   res.render("sellers");
-// });
+app.get("/client/sellers.html", function(req, res) {
+  res.sendfile("public/client/sellers.html");
+});
 
-// app.get("/client/sellers", function(req, res) {
-//   res.render("sellers");
-// });
+app.get("/client/sellers", function(req, res) {
+  res.sendfile("public/client/sellers.html");
+});
 
-// app.get("/client/brands.html", function(req, res) {
-//   res.render("brands");
-// });
+app.get("/client/brands.html", function(req, res) {
+  res.sendfile("public/client/brands.html");
+});
 
-// app.get("/client/brands", function(req, res) {
-//   res.render("brands");
-// });
+app.get("/client/brands", function(req, res) {
+  res.sendfile("public/client/brands.html");
+});
 
-// app.get("/client/keywords.html", function(req, res) {
-//   res.render("keywords");
-// });
+app.get("/client/keywords.html", function(req, res) {
+  res.sendfile("public/client/keywords.html");
+});
 
-// app.get("/client/keywords", function(req, res) {
-//   res.render("keywords");
-// });
+app.get("/client/keywords", function(req, res) {
+  res.sendfile("public/client/keywords.html");
+});
 
-// app.get("/client/analytic.html", function(req, res) {
-//   res.render("analytic");
-// });
+app.get("/client/analytic.html", function(req, res) {
+  res.sendfile("public/client/analytic.html");
+});
 
-// app.get("/client/analytic", function(req, res) {
-//   res.render("analytic");
-// });
+app.get("/client/analytic", function(req, res) {
+  res.sendfile("public/client/analytic.html");
+});
 
-// app.get("/client/market.html", function(req, res) {
-//   res.render("market");
-// });
+app.get("/client/market.html", function(req, res) {
+  res.sendfile("public/client/market.html");
+});
 
-// app.get("/client/market", function(req, res) {
-//   res.render("market");
-// });
+app.get("/client/market", function(req, res) {
+  res.sendfile("public/client/market.html");
+});
 
-// app.get("/client/store/main.html", function(req, res) {
-//   res.render("main");
-// });
+app.get("/client/store/main.html", function(req, res) {
+  res.sendfile("public/client/main.html");
+});
 
-// app.get("/client/store/main", function(req, res) {
-//   res.render("main");
-// });
+app.get("/client/store/main", function(req, res) {
+  res.sendfile("public/client/main.html");
+});
 
-// app.get("/client/lists.html", function(req, res) {
-//   res.render("lists");
-// });
+app.get("/client/lists.html", function(req, res) {
+  res.sendfile("public/client/lists.html");
+});
 
-// app.get("/client/lists", function(req, res) {
-//   res.render("lists");
-// });
+app.get("/client/lists", function(req, res) {
+  res.sendfile("public/client/lists.html");
+});
 
 app.get("/client/rates.html", function(req, res) {
-  res.render("rates.html");
+  res.sendfile("public/client/rates.html");
 });
 
 app.get("/client/rates", function(req, res) {
-  res.render("rates.html");
+  res.sendfile("public/client/rates.html");
 });
 
 app.get("/client/partner.html", function(req, res) {
-  res.render("public/client/partner");
+  res.sendfile("public/client/partner.html");
 });
 
 app.get("/client/partner", function(req, res) {
-  res.render("public/client/partner");
+  res.sendfile("public/client/partner.html");
 });
 
-app.get("/client/partner.html.html", function(req, res) {
-  res.render("public/client/partner");
+
+app.get("/client/user.html", function(req, res) {
+  res.sendfile("public/client/user.html");
 });
 
-// app.get("/client/user.html", function(req, res) {
-//   res.render("user");
-// });
+app.get("/client/user", function(req, res) {
+  res.sendfile("user.html");
+});
 
-// app.get("/client/user", function(req, res) {
-//   res.render("user");
-// });
+app.get("/client/faq.html", function(req, res) {
+  res.sendfile("faq.html");
+});
 
-// app.get("/client/faq.html", function(req, res) {
-//   res.render("faq");
-// });
-
-// app.get("/client/faq", function(req, res) {
-//   res.render("faq");
-// });
+app.get("/client/faq", function(req, res) {
+  res.sendfile("faq.html");
+});
 
 app.get("/client/bonus.html", function(req, res) {
   res.sendfile("public/client/bonus.html");
