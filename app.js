@@ -10,7 +10,7 @@ var favicon = require('serve-favicon');
 
 const app = express();
 
-const PORT = process.env.PORT || 57989;
+const PORT = process.env.PORT || 5000;
 
 // app.use(favicon(__dirname + '/public/images/favicon.png'));
 const faviconPath = path.join(__dirname, 'public/images/favicon.png')
