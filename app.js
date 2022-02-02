@@ -98,11 +98,11 @@ app.get("/register", function(req, res) {
 });
 
 app.get("/client/dashboard", function(req, res) {
-  res.sendfile("public/client/client.html");
+  res.sendfile("public/client/dashboard.html");
 });
 
 app.get("/client/dashboard.html", function(req, res) {
-  res.sendfile("public/client/client.html");
+  res.sendfile("public/client/dashboard.html");
 });
 
 app.get("/client/products.html", function(req, res) {
@@ -207,15 +207,15 @@ app.get("/client/user.html", function(req, res) {
 });
 
 app.get("/client/user", function(req, res) {
-  res.sendfile("user.html");
+  res.sendfile("public/client/user.html");
 });
 
 app.get("/client/faq.html", function(req, res) {
-  res.sendfile("faq.html");
+  res.sendfile("public/client/faq.html");
 });
 
 app.get("/client/faq", function(req, res) {
-  res.sendfile("faq.html");
+  res.sendfile("public/client/faq.html");
 });
 
 app.get("/client/bonus.html", function(req, res) {
@@ -224,4 +224,8 @@ app.get("/client/bonus.html", function(req, res) {
 
 app.get("/client/bonus", function(req, res) {
   res.sendfile("public/client/bonus.html");
+});
+
+app.get("/client/template/bonus", function(req, res) {
+  res.sendfile("public/client/template/bonus.html");
 });

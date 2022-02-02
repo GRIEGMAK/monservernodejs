@@ -195,86 +195,13 @@
                 -->
             </div>
         </div>
-        <div id="page-content" style=""><div class="row wrapper border-bottom white-bg page-heading">
-            <div class="col-lg-10">
-                <h2>Отслеживание</h2>
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item active">
-                        <a href="/client/dashboard">Главная</a>
-                    </li>
-                    <li class="breadcrumb-item active">
-                        <strong>Отслеживание</strong>
-                    </li>
-                </ol>
-            </div>
-            <div class="col-lg-2">
-        
-            </div>
+        <div id="page-content" style="">            
+            <script src="https://www.w3schools.com/lib/w3.js"></script>
+            <div w3-include-HTML="./template/bonus.html"></div>
+            <script>
+                w3.includeHTML();
+            </script>
         </div>
-        
-        <div class="wrapper wrapper-content" id="content">
-        
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="tabs-container">
-                        <ul class="nav nav-tabs" id="folder-types" style="float: left" role="tablist">
-                            <li>
-                                <a class="nav-link active" data-field="q[type][equal]" data-field-value="product" data-toggle="tab" href="#tab-1">Товары</a>
-                            </li>
-                            <li>
-                                <a class="nav-link" data-toggle="tab" data-field="q[type][equal]" data-field-value="seller" href="#tab-1">Продавцы</a>
-                            </li>
-                            <li>
-                                <a class="nav-link" data-toggle="tab" data-field="q[type][equal]" data-field-value="category" href="#tab-1">Категории</a>
-                            </li>
-                            <li>
-                                <a class="nav-link" data-toggle="tab" data-field="q[type][equal]" data-field-value="brand" href="#tab-1">Бренды</a>
-                            </li>
-                        </ul>
-                        <div class="tab-content">
-                            <div role="tabpanel" id="tab-1" class="tab-pane active">
-                                <div class="panel-body ibox-content">
-                                    <div class="sk-spinner sk-spinner-wave">
-                                        <div class="sk-rect1"></div>
-                                        <div class="sk-rect2"></div>
-                                        <div class="sk-rect3"></div>
-                                        <div class="sk-rect4"></div>
-                                        <div class="sk-rect5"></div>
-                                    </div>
-                                    <button type="button" id="create-folder" class="btn btn-outline btn-primary">Создать папку</button>
-                                    <div class="table-responsive">
-                                        <table id="model-table" class="table table-striped">
-                    
-                    <thead>
-                        <tr>
-                            <th>Название</th>
-                            <th>Количество</th>
-                            <th>Дата создания</th>
-                            <th>Дата обновления</th>
-                            <th>Действия</th>
-                        </tr>
-                    </thead>
-                
-                    <tbody>
-                        
-                        <tr>
-                            <td colspan="5" class="text-center">Пусто</td>
-                        </tr>
-                    
-                    </tbody>
-                </table>
-                                    </div>
-                                    <a style="display: none;" class="btn btn-primary btn-rounded btn-block" id="show-more" href="#">Показать еще</a>
-                                    <div class="clearfix"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <script src="/client/js/pages/lists.js?id=5"></script></div>
 
         <div class="footer" >
 
